@@ -47,7 +47,13 @@ export function SiteFooter() {
               </p>
               <p className="flex items-center gap-1.5">
                 <Phone size={14} aria-hidden="true" />
-                <span className="font-mono">+1 (689) 313 7819</span>
+              <a href="https://wa.me/16893137819"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono"
+              >
+                +1 (689) 313 7819
+              </a>
               </p>
             </div>
           </div>

@@ -64,7 +64,8 @@ export function ContactPage() {
               label="Customer Service"
               primary="+1 (689) 313 7819"
               secondary="Available 24/7"
-              href="tel:+16893137819"
+              href="https://wa.me/16893137819"
+  
             />
             <div className="border-t border-dashed border-border" />
             <ContactRow
