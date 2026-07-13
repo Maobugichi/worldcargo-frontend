@@ -1,0 +1,1 @@
+export { ServicesPage as default } from "@/features/marketing/pages/ServicesPage";
