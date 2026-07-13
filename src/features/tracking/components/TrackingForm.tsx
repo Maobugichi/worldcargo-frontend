@@ -19,27 +19,32 @@ export function TrackingForm({ onSubmit, isLoading }: TrackingFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex w-full max-w-xl gap-2">
-      <label htmlFor="tracking-form-input" className="sr-only">
-        Tracking number
-      </label>
-      <input
-        id="tracking-form-input"
-        type="text"
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-        placeholder="Enter your tracking number"
-        className="flex-1 rounded-lg border border-border-strong bg-surface px-4 py-3 font-mono text-base tracking-wide text-foreground outline-none transition-colors focus:border-accent focus-visible:ring-2 focus-visible:ring-accent/30"
-        autoComplete="off"
-        autoCapitalize="characters"
-      />
-      <button
-        type="submit"
-        disabled={isLoading || value.trim().length === 0}
-        className="rounded-lg bg-accent px-6 py-3 text-base font-medium text-accent-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+    <div className="w-full max-w-lg rounded-xl border border-border-strong bg-surface p-1.5">
+      <form
+        onSubmit={handleSubmit}
+        className="flex w-full flex-col items-stretch gap-2 sm:flex-row sm:items-center"
       >
-        {isLoading ? "Tracking..." : "Track shipment"}
-      </button>
-    </form>
+        <label htmlFor="tracking-form-input" className="sr-only">
+          Tracking number
+        </label>
+        <input
+          id="tracking-form-input"
+          type="text"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+          placeholder="Enter your tracking number"
+          className="min-w-0 flex-1 bg-transparent px-3 py-2.5 font-mono text-base tracking-wide text-foreground outline-none placeholder:text-foreground/40 placeholder:tracking-normal"
+          autoComplete="off"
+          autoCapitalize="characters"
+        />
+        <button
+          type="submit"
+          disabled={isLoading || value.trim().length === 0}
+          className="shrink-0 rounded-xl bg-accent px-6 py-3 text-base font-medium text-accent-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
+        >
+          {isLoading ? "Tracking..." : "Track shipment"}
+        </button>
+      </form>
+    </div>
   );
 }

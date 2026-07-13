@@ -39,7 +39,8 @@ export function HeroSection() {
           transition={{ duration: 0.5, delay: 0.05, ease: "easeOut" }}
           className="max-w-2xl font-display text-5xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-7xl"
         >
-          Know exactly where your parcel is, every step of the way.
+         Ship Anywhere.
+          Track Everything.
         </motion.h1>
 
         <motion.p
@@ -48,8 +49,7 @@ export function HeroSection() {
           transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
           className="max-w-lg text-lg leading-relaxed text-foreground/60"
         >
-          Enter your tracking number below to see live status updates, from
-          dispatch to delivery.
+          Enterprise-grade logistics infrastructure trusted by 10,000+ businesses worldwide for secure, fast, and reliable delivery solutions. Real-time visibility from pickup to delivery.
         </motion.p>
 
         <motion.div

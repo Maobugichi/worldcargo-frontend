@@ -18,6 +18,8 @@
   --color-surface: #ffffff;
   --color-border: #14171b1a;
   --color-border-strong: #14171b33;
+
+  --color-gold: #f2b90c;
 }
 
 @theme inline {
@@ -31,6 +33,7 @@
   --color-status-progress: var(--color-status-progress);
   --color-status-success: var(--color-status-success);
   --color-status-exception: var(--color-status-exception);
+  --color-gold: var(--color-gold);
   --color-surface: var(--color-surface);
   --color-border: var(--color-border);
   --color-border-strong: var(--color-border-strong);
@@ -49,4 +52,56 @@ body {
 
 .font-display {
   font-family: var(--font-display), sans-serif;
+}
+
+/* Liquid glass card. Two layers do the real work:
+   1. backdrop-filter refracts (lenses) what's behind via the SVG displacement
+      filter, then blurs and boosts saturation — this is the "liquid" part.
+      Safari ignores url() filters in backdrop-filter and falls back to blur+saturate only.
+   2. ::after is the specular highlight: a diagonal sheen blended with overlay
+      to read as light catching the surface, the way a flat tint never does. */
+.glass-card {
+  position: relative;
+  isolation: isolate;
+  background: color-mix(in srgb, var(--color-postal) 26%, transparent 74%);
+  backdrop-filter: url(#glass-distortion) blur(6px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  box-shadow:
+    0 12px 32px color-mix(in srgb, var(--color-postal) 22%, transparent 78%),
+    inset 0 1px 1px color-mix(in srgb, white 45%, transparent);
+}
+
+.glass-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, white 70%, transparent) 0%,
+    color-mix(in srgb, var(--color-postal) 25%, transparent) 60%,
+    transparent 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.glass-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    115deg,
+    color-mix(in srgb, white 55%, transparent) 0%,
+    transparent 28%,
+    transparent 52%,
+    color-mix(in srgb, white 30%, transparent) 100%
+  );
+  mix-blend-mode: overlay;
+  opacity: 0.5;
+  pointer-events: none;
 }

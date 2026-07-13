@@ -12,4 +12,4 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Contact", href: "/contact" },
 ];
 
-export const SITE_NAME = "Parcel Tracker";
+export const SITE_NAME = "World Cargo";

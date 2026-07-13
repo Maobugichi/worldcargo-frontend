@@ -1,12 +1,64 @@
 export interface ServiceItem {
   title: string;
   description: string;
+  features?: string[];
 }
 
 export const SERVICES: ServiceItem[] = [
-  { title: "Standard Delivery", description: "Reliable door-to-door delivery at everyday rates." },
-  { title: "Express Delivery", description: "Faster turnaround for time-sensitive shipments." },
-  { title: "International Shipping", description: "Cross-border delivery with full tracking end to end." },
+  {
+    title: "Standard Delivery",
+    description: "Reliable door-to-door delivery at everyday rates.",
+    features: [
+      "3–5 business day delivery",
+      "Real-time tracking included",
+      "Signature on delivery available",
+    ],
+  },
+  {
+    title: "Express Delivery",
+    description: "Faster turnaround for time-sensitive shipments.",
+    features: [
+      "Next-day delivery in most regions",
+      "Priority handling at every hub",
+      "SMS and email status alerts",
+    ],
+  },
+  {
+    title: "International Shipping",
+    description: "Cross-border delivery with full tracking end to end.",
+    features: [
+      "Customs documentation handled for you",
+      "Delivery to 150+ countries",
+      "End-to-end tracking across borders",
+    ],
+  },
+  {
+    title: "Freight & Bulk",
+    description: "Palletized and bulk freight for large-volume shipments.",
+    features: [
+      "Full and partial truckload options",
+      "Dedicated freight coordinator",
+      "Volume-based pricing",
+    ],
+  },
+  {
+    title: "Warehousing & Storage",
+    description: "Short and long-term storage with on-demand fulfillment.",
+    features: [
+      "Climate-controlled facilities",
+      "Pick, pack, and ship on request",
+      "Live inventory visibility",
+    ],
+  },
+  {
+    title: "Shipment Insurance",
+    description: "Added protection and coverage for high-value shipments.",
+    features: [
+      "Coverage up to full declared value",
+      "Fast claims processing",
+      "No paperwork at drop-off",
+    ],
+  },
 ];
 
 export interface FaqItem {
@@ -45,26 +97,29 @@ export interface TestimonialItem {
   quote: string;
   name: string;
   role: string;
-  photo?: string; // optional path/URL to a headshot, e.g. "/images/testimonials/adaeze.jpg"
+  photo?: string; 
 }
 
 export const TESTIMONIALS: TestimonialItem[] = [
   {
     quote:
       "I had a customs hold on an international shipment and actually knew what was happening the whole time instead of guessing. That alone is worth it.",
-    name: "Adaeze Okonkwo",
+    name: "Emily Carter",
     role: "Small business owner",
+    photo:'/andy.jpg'
   },
   {
     quote:
-      "Switched our warehouse's outbound deliveries here after one too many 'where's my package' calls from customers. Those calls basically stopped.",
-    name: "Michael Chen",
-    role: "Operations lead, Northwind Goods",
+      "We switched our warehouse's outbound deliveries here after one too many 'where's my package' calls from customers. Those calls basically stopped.",
+    name: "Oliver Bennett",
+    role: "Operations lead, Bennett & Sons Logistics",
+    photo:'/bruce.jpg'
   },
   {
     quote:
-      "Express delivery actually meant express. Package showed up a day earlier than the estimate, and I got an email the moment it left the hub.",
-    name: "Fatima Bello",
+      "Express delivery actually meant express. My package showed up a day earlier than the estimate, and I got an email the moment it left the hub.",
+    name: "Émilie Tremblay",
     role: "Frequent shipper",
+     photo:'/diego.jpg'
   },
 ];

@@ -43,11 +43,11 @@ export function SiteFooter() {
             <div className="mt-3 space-y-1.5 text-sm text-foreground/50">
               <p className="flex items-center gap-1.5">
                 <EnvelopeSimple size={14} aria-hidden="true" />
-                <span className="font-mono">support@example.com</span>
+                <a className="font-mono">support@worldcargoexpress</a>
               </p>
               <p className="flex items-center gap-1.5">
                 <Phone size={14} aria-hidden="true" />
-                <span className="font-mono">+234 000 000 0000</span>
+                <span className="font-mono">+1 (689) 313 7819</span>
               </p>
             </div>
           </div>

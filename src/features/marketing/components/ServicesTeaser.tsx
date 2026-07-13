@@ -1,12 +1,15 @@
+// components/ServicesTeaser.tsx
 "use client";
 
 import Link from "next/link";
 import { motion } from "motion/react";
 import { CaretRight } from "@phosphor-icons/react/dist/ssr";
 import { SERVICES } from "../utils/placeholder-content";
-import { ServiceRow } from "../components/ServiceRow";
+import { ServiceCard } from "../components/ServiceCard";
 
 export function ServicesTeaser() {
+  const preview = SERVICES.slice(0, 3);
+
   return (
     <section className="mx-auto max-w-6xl px-4 py-24">
       <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
@@ -32,8 +35,8 @@ export function ServicesTeaser() {
         </Link>
       </div>
 
-      <div className="mt-14 border-t border-border">
-        {SERVICES.map((service, i) => (
+      <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-3">
+        {preview.map((service, i) => (
           <motion.div
             key={service.title}
             initial={{ opacity: 0, y: 12 }}
@@ -41,16 +44,13 @@ export function ServicesTeaser() {
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.45, delay: i * 0.06, ease: "easeOut" }}
           >
-            <ServiceRow service={service} />
+            <ServiceCard service={service} variant="compact" />
           </motion.div>
         ))}
       </div>
 
       <div className="mt-8 sm:hidden">
-        <Link
-          href="/services"
-          className="inline-flex items-center gap-1.5 text-sm font-medium text-accent"
-        >
+        <Link href="/services" className="inline-flex items-center gap-1.5 text-sm font-medium text-accent">
           See all services
           <CaretRight size={14} weight="bold" aria-hidden="true" />
         </Link>

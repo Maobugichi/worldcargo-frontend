@@ -5,7 +5,7 @@ import { Lightning, EnvelopeSimple, Globe, ShieldCheck } from "@phosphor-icons/r
 
 type Feature = {
   icon: typeof Lightning;
-  number: string;
+  step: string;
   title: string;
   description: string;
   live?: boolean;
@@ -14,26 +14,26 @@ type Feature = {
 const FEATURES: Feature[] = [
   {
     icon: Lightning,
-    number: "01",
+    step: "Received",
     title: "Real-time updates",
     description: "See your shipment's status the moment it changes, not hours later.",
     live: true,
   },
   {
     icon: EnvelopeSimple,
-    number: "02",
+    step: "Notified",
     title: "Email notifications",
     description: "Opt in once and get emailed automatically at every status change.",
   },
   {
     icon: Globe,
-    number: "03",
+    step: "In transit",
     title: "Nationwide coverage",
     description: "From dispatch hub to final delivery, wherever you are.",
   },
   {
     icon: ShieldCheck,
-    number: "04",
+    step: "Delivered",
     title: "Reliable delivery",
     description: "Every shipment is logged and tracked from the moment it's received.",
   },
@@ -46,34 +46,28 @@ function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.5, delay: index * 0.08, ease: "easeOut" }}
-      className="relative"
+      className="relative flex flex-col items-start"
     >
-      {/* ghost numeral — the one signature element */}
-      <span
-        className="pointer-events-none absolute -top-6 -left-1 select-none font-display text-[6rem] font-medium leading-none text-postal/[0.07] sm:text-[7rem]"
-        aria-hidden="true"
-      >
-        {feature.number}
-      </span>
-
-      <div className="relative">
-        <div className="relative flex h-11 w-11 items-center justify-center rounded-full border border-postal/25">
-          <feature.icon size={20} weight="bold" className="text-postal" aria-hidden="true" />
-          {feature.live && (
-            <span
-              className="absolute -right-0.5 -top-0.5 h-2.5 w-2.5 rounded-full bg-status-progress ring-2 ring-background"
-              aria-hidden="true"
-            />
-          )}
-        </div>
-
-        <h3 className="mt-6 font-display text-2xl font-medium leading-tight text-foreground">
-          {feature.title}
-        </h3>
-        <p className="mt-3 max-w-xs text-base leading-relaxed text-foreground/60">
-          {feature.description}
-        </p>
+      {/* checkpoint marker, sits on top of the connecting route line */}
+      <div className="relative z-10 flex h-11 w-11 items-center justify-center rounded-full border border-postal/25 bg-background">
+        <feature.icon size={20} weight="bold" className="text-postal" aria-hidden="true" />
+        {feature.live && (
+          <span
+            className="absolute -right-0.5 -top-0.5 h-2.5 w-2.5 rounded-full bg-status-progress ring-2 ring-background"
+            aria-hidden="true"
+          />
+        )}
       </div>
+
+      <p className="mt-4 font-mono text-xs uppercase tracking-[0.2em] text-postal/50">
+        {feature.step}
+      </p>
+      <h3 className="mt-2 font-display text-2xl font-medium leading-tight text-foreground">
+        {feature.title}
+      </h3>
+      <p className="mt-3 max-w-xs text-base leading-relaxed text-foreground/60">
+        {feature.description}
+      </p>
     </motion.div>
   );
 }
@@ -95,7 +89,13 @@ export function FeatureHighlights() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 gap-16 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+      {/* route line + checkpoints */}
+      <div className="relative grid grid-cols-1 gap-16 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        {/* horizontal route line, desktop only, runs through icon centers */}
+        <div
+          className="pointer-events-none absolute left-0 right-0 top-[22px] hidden border-t border-dashed border-postal/25 lg:block"
+          aria-hidden="true"
+        />
         {FEATURES.map((feature, i) => (
           <FeatureCard key={feature.title} feature={feature} index={i} />
         ))}
