@@ -19,7 +19,7 @@ const bigShoulders = Big_Shoulders({
 });
 
 export const metadata: Metadata = {
-  title: "Parcel Tracker",
+  title: "World Cargo Express",
   description: "Track your shipment",
 };
 

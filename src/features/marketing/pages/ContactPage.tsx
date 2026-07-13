@@ -19,19 +19,19 @@ function ContactRow({
       <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-postal">
         <Icon size={20} weight="bold" className="text-postal-foreground" aria-hidden="true" />
       </div>
-      <div>
+      <div className="min-w-0">
         <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/40">
           {label}
         </p>
         {href ? (
           <a
             href={href}
-            className="mt-1.5 block font-mono text-base text-foreground underline decoration-border-strong underline-offset-4 hover:text-postal"
+            className="mt-1.5 block break-words font-mono text-base text-foreground underline decoration-border-strong underline-offset-4 hover:text-postal"
           >
             {primary}
           </a>
         ) : (
-          <p className="mt-1.5 font-mono text-base text-foreground">{primary}</p>
+          <p className="mt-1.5 break-words font-mono text-base text-foreground">{primary}</p>
         )}
         <p className="mt-0.5 text-sm text-foreground/50">{secondary}</p>
       </div>
@@ -53,9 +53,11 @@ export function ContactPage() {
       </p>
 
       <div className="mt-14 grid gap-8 sm:grid-cols-[1.5fr_1fr] sm:gap-10">
-        <ContactForm />
+        <div className="min-w-0">
+          <ContactForm />
+        </div>
 
-        <div className="rounded-2xl border border-dashed border-border-strong bg-surface p-8">
+        <div className="min-w-0 rounded-2xl border border-dashed border-border-strong bg-surface p-8">
           <div className="flex flex-col gap-6">
             <ContactRow
               icon={Headset}

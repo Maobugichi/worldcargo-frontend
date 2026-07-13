@@ -208,7 +208,7 @@ Today, we operate a massive fleet of vehicles and aircraft, serving millions of 
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover grayscale transition-all duration-300 hover:grayscale-0"
+                    className="object-cover"
                   />
                 </div>
                 <div className="flex flex-1 flex-col items-start justify-center px-4">

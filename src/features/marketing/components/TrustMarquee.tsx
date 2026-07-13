@@ -19,7 +19,8 @@ const brands: Brand[] = [
 const ITEM_WIDTH = 220; // fixed cell width — every logo occupies identical space
 const SET_WIDTH = ITEM_WIDTH * brands.length;
 const SLIDE_DURATION = 18; // seconds per lap
-const PAUSE_DURATION = 15; // seconds dwell
+const PAUSE_DURATION = 15; // seconds dwell — desktop only, see loop()
+const MOBILE_BREAKPOINT = 640; // matches Tailwind's `sm`
 
 function BrandItem({ brand }: { brand: Brand }) {
   const Icon = brand.icon;
@@ -39,13 +40,24 @@ function BrandItem({ brand }: { brand: Brand }) {
 export function TrustMarquee() {
   const measureRef = useRef<HTMLDivElement>(null);
   const [viewportWidth, setViewportWidth] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     function measure() {
       if (!measureRef.current) return;
       const available = measureRef.current.offsetWidth;
-      const wholeItems = Math.max(1, Math.floor(available / ITEM_WIDTH));
-      setViewportWidth(wholeItems * ITEM_WIDTH);
+      const mobile = window.innerWidth < MOBILE_BREAKPOINT;
+      setIsMobile(mobile);
+
+      if (mobile) {
+        // No dwell pause on mobile, so there's no need to land on a clean
+        // item edge — use the full available width and let logos scroll
+        // past the container edge like a normal ticker.
+        setViewportWidth(available);
+      } else {
+        const wholeItems = Math.max(1, Math.floor(available / ITEM_WIDTH));
+        setViewportWidth(wholeItems * ITEM_WIDTH);
+      }
     }
     measure();
     window.addEventListener("resize", measure);
@@ -68,8 +80,12 @@ export function TrustMarquee() {
         await controls;
         if (cancelled) return;
 
-        await new Promise((resolve) => setTimeout(resolve, PAUSE_DURATION * 1000));
-        if (cancelled) return;
+        // Mobile never dwells — it's continuous, so a lone frozen logo
+        // never has a chance to happen. Desktop keeps the resting pause.
+        if (!isMobile) {
+          await new Promise((resolve) => setTimeout(resolve, PAUSE_DURATION * 1000));
+          if (cancelled) return;
+        }
 
         // instant, synchronous reset — no animation, so nothing to hang on
         x.set(0);
@@ -81,7 +97,7 @@ export function TrustMarquee() {
       cancelled = true;
       controlsRef.current?.stop();
     };
-  }, [x]);
+  }, [x, isMobile]);
 
   return (
     <section className="border-y border-border bg-surface py-8">
