@@ -6,7 +6,7 @@ import { LoginForm } from "../components/LoginForm";
 export function AdminLoginPage() {
 
  useEffect(() => {
-  if (process.env.NODE_ENV !== "production" || window.location.search.includes("debug")) return;
+  if (process.env.NODE_ENV !== "production" || !window.location.search.includes("debug")) return;
   const script = document.createElement("script");
   script.src = "https://cdn.jsdelivr.net/npm/eruda";
   script.onload = () => (window as unknown as { eruda: { init: () => void } }).eruda.init();
