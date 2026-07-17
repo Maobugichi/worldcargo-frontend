@@ -27,7 +27,7 @@ export function SubscribeForm({ trackingNumber }: { trackingNumber: string }) {
   if (state === "done") {
     return (
       <div
-        className="flex w-full max-w-xl items-start gap-3 rounded-2xl border border-border bg-surface p-6"
+        className="flex w-full max-w-xl items-start gap-3 rounded-2xl border border-border bg-elevated p-6"
         aria-live="polite"
       >
         <CheckCircle
@@ -59,12 +59,12 @@ export function SubscribeForm({ trackingNumber }: { trackingNumber: string }) {
           placeholder="you@example.com"
           aria-invalid={state === "error"}
           aria-describedby={state === "error" ? "subscribe-error" : undefined}
-          className="flex-1 rounded-lg border border-border-strong bg-surface px-3 py-2 text-sm text-foreground outline-none transition-colors focus:border-accent focus-visible:ring-2 focus-visible:ring-accent/30"
+          className="flex-1 rounded-lg border border-border-strong bg-elevated px-3 py-2 text-sm text-foreground outline-none transition-colors focus:border-electric focus-visible:ring-2 focus-visible:ring-electric/30"
         />
         <button
           type="submit"
           disabled={state === "submitting"}
-          className="rounded-lg border border-border-strong px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-background disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          className="rounded-lg border border-border-strong px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-background disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-electric"
         >
           {state === "submitting" ? "Subscribing..." : "Subscribe"}
         </button>

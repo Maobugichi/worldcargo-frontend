@@ -28,7 +28,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className="text-sm font-medium uppercase tracking-[0.25em] text-postal/70"
+          className="text-sm font-medium uppercase tracking-[0.25em] text-foreground/70"
         >
           Track a parcel
         </motion.p>
@@ -37,9 +37,9 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.05, ease: "easeOut" }}
-          className="max-w-2xl font-display text-5xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-7xl"
+          className="max-w-2xl font-display text-5xl font-medium leading-[1.05] tracking-tight text-electric sm:text-6xl lg:text-7xl"
         >
-         Ship Anywhere.
+        Ship Anywhere.
           Track Everything.
         </motion.h1>
 

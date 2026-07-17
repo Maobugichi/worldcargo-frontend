@@ -124,7 +124,7 @@ export function AboutPage() {
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.45, ease: "easeOut" }}
           >
-            <p className="text-sm font-medium uppercase tracking-[0.25em] text-postal/70">
+            <p className="text-sm font-medium uppercase tracking-[0.25em] text-postal-tint/80">
               Our story
             </p>
             <h2 className="mt-4 font-display text-4xl font-medium leading-tight tracking-tight text-foreground sm:text-5xl">
@@ -144,12 +144,13 @@ Today, we operate a massive fleet of vehicles and aircraft, serving millions of 
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.45, delay: 0.1, ease: "easeOut" }}
-            className="relative aspect-[4/5] overflow-hidden rounded-sm border border-border bg-surface sm:aspect-square"
+            className="relative aspect-[4/5] overflow-hidden rounded-sm border border-border bg-elevated sm:aspect-square"
           >
             <Image
               src="/william.jpg"
               alt="Our team at work"
               fill
+              sizes="(min-width: 640px) 50vw, 100vw"
               className="object-cover"
             />
           </motion.div>
@@ -186,7 +187,7 @@ Today, we operate a massive fleet of vehicles and aircraft, serving millions of 
 
         {/* Meet the team */}
         <section className="border-t border-border py-24">
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-postal/70">
+          <p className="text-sm font-medium uppercase tracking-[0.25em] text-postal-tint/80">
             Team
           </p>
           <h2 className="mt-4 font-display text-3xl font-medium leading-tight tracking-tight text-foreground sm:text-4xl">
@@ -201,13 +202,14 @@ Today, we operate a massive fleet of vehicles and aircraft, serving millions of 
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.45, delay: i * 0.08, ease: "easeOut" }}
-                className="flex h-[440px] flex-col overflow-hidden rounded-sm border border-border bg-surface"
+                className="flex h-[440px] flex-col overflow-hidden rounded-sm border border-border bg-elevated"
               >
                 <div className="relative h-[90%] w-full">
                   <Image
                     src={member.image}
                     alt={member.name}
                     fill
+                    sizes="(min-width: 640px) 33vw, 100vw"
                     className="object-cover"
                   />
                 </div>
@@ -235,7 +237,7 @@ Today, we operate a massive fleet of vehicles and aircraft, serving millions of 
               transition={{ duration: 0.45, delay: i * 0.08, ease: "easeOut" }}
               className="flex flex-col gap-2 border-b border-border py-7 sm:flex-row sm:items-baseline sm:gap-8"
             >
-              <span className="font-mono text-sm text-postal/50 sm:w-14 sm:shrink-0">
+              <span className="font-mono text-sm text-postal-tint/70 sm:w-14 sm:shrink-0">
                 {value.code}
               </span>
               <div>

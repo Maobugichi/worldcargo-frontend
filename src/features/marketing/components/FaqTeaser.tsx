@@ -11,10 +11,10 @@ export function FaqTeaser() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="bg-surface py-24">
+    <section className="bg-elevated py-24">
       <div className="mx-auto max-w-3xl px-4">
         <div className="max-w-xl">
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-postal/70">
+          <p className="text-sm font-medium uppercase tracking-[0.25em] text-postal-tint/80">
             Answers
           </p>
           <h2 className="mt-4 font-display text-4xl font-medium leading-tight tracking-tight text-foreground sm:text-5xl">
@@ -37,7 +37,7 @@ export function FaqTeaser() {
         <div className="mt-8 flex justify-center">
           <Link
             href="/faq"
-            className="group inline-flex items-center gap-1.5 text-sm font-medium text-accent"
+            className="group inline-flex items-center gap-1.5 text-sm font-medium text-electric"
           >
             See all questions
             <CaretRight

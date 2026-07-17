@@ -29,14 +29,14 @@ export function HeroTrackerForm() {
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder="Enter your tracking number"
-        className="min-w-0 flex-1 bg-transparent px-3 py-2.5 font-mono text-base tracking-wide text-foreground outline-none placeholder:text-foreground/40 placeholder:tracking-normal"
+        className="min-w-0 flex-1 bg-transparent px-3 py-2.5 font-mono text-base tracking-wide text-postal outline-none placeholder:text-postal/40 placeholder:tracking-normal"
         autoComplete="off"
         autoCapitalize="characters"
       />
       <button
         type="submit"
         disabled={value.trim().length === 0}
-        className="shrink-0 rounded-xl bg-accent px-6 py-3 text-base font-medium text-accent-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
+        className="shrink-0 rounded-xl bg-electric px-6 py-3 text-base font-medium text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
       >
         Track shipment
       </button>

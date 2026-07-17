@@ -31,7 +31,7 @@ export function FaqAccordionItem({
         <Plus
           size={18}
           weight="bold"
-          className={`shrink-0 text-postal/60 transition-transform duration-200 motion-reduce:transition-none ${
+          className={`shrink-0 text-postal-tint transition-transform duration-200 motion-reduce:transition-none ${
             isOpen ? "rotate-45" : "rotate-0"
           }`}
           aria-hidden="true"

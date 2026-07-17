@@ -24,9 +24,9 @@ function ContactRow({
           {label}
         </p>
         {href ? (
-          <a
-            href={href}
-            className="mt-1.5 block break-words font-mono text-base text-foreground underline decoration-border-strong underline-offset-4 hover:text-postal"
+          
+          <a  href={href}
+            className="mt-1.5 block break-words font-mono text-base text-foreground underline decoration-border-strong underline-offset-4 hover:text-postal-tint"
           >
             {primary}
           </a>
@@ -42,7 +42,7 @@ function ContactRow({
 export function ContactPage() {
   return (
     <main className="mx-auto max-w-4xl flex-1 px-4 py-24">
-      <p className="text-sm font-medium uppercase tracking-[0.25em] text-postal/70">
+      <p className="text-sm font-medium uppercase tracking-[0.25em] text-postal-tint/80">
         Contact
       </p>
       <h1 className="mt-4 font-display text-4xl font-medium leading-tight tracking-tight text-foreground sm:text-5xl">
@@ -57,7 +57,7 @@ export function ContactPage() {
           <ContactForm />
         </div>
 
-        <div className="min-w-0 rounded-2xl border border-dashed border-border-strong bg-surface p-8">
+        <div className="min-w-0 rounded-2xl border border-dashed border-border-strong bg-elevated p-8">
           <div className="flex flex-col gap-6">
             <ContactRow
               icon={Headset}
@@ -65,7 +65,6 @@ export function ContactPage() {
               primary="+1 (689) 313 7819"
               secondary="Available 24/7"
               href="https://wa.me/16893137819"
-  
             />
             <div className="border-t border-dashed border-border" />
             <ContactRow

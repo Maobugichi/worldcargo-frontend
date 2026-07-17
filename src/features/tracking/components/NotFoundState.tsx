@@ -3,7 +3,7 @@ import { MagnifyingGlassMinus } from "@phosphor-icons/react";
 export function NotFoundState({ trackingNumber }: { trackingNumber: string }) {
   return (
     <div
-      className="w-full max-w-xl rounded-xl border border-border bg-surface p-6 text-center"
+      className="w-full max-w-xl rounded-xl border border-border bg-elevated p-6 text-center"
       aria-live="polite"
     >
       <MagnifyingGlassMinus size={22} weight="bold" className="mx-auto text-foreground/30" aria-hidden="true" />

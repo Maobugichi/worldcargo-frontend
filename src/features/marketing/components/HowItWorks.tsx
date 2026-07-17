@@ -9,7 +9,7 @@ const STEPS = [
     title: "Enter your number",
     description: "Type your tracking number into the search box.",
     mockup: (
-      <div className="flex items-center gap-2 rounded-full border border-border-strong bg-background px-4 py-3">
+      <div className="flex items-center gap-2 rounded-full border border-border-strong bg-background/60 px-4 py-3">
         <span className="font-mono text-sm text-foreground/40">TRK</span>
         <span className="h-4 w-px bg-border-strong" aria-hidden="true" />
         <span className="font-mono text-sm text-foreground">2839471</span>
@@ -22,7 +22,7 @@ const STEPS = [
     title: "See live status",
     description: "View the current status, route, and full event timeline.",
     mockup: (
-      <div className="rounded-2xl border border-border-strong bg-background px-4 py-3">
+      <div className="rounded-2xl border border-border-strong bg-background/60 px-4 py-3">
         <div className="flex items-center justify-between">
           <span className="text-xs font-medium uppercase tracking-wide text-status-progress">
             In transit
@@ -43,7 +43,7 @@ const STEPS = [
     title: "Get notified",
     description: "Opt in to email updates so you never have to check manually.",
     mockup: (
-      <div className="flex items-center justify-between rounded-2xl border border-border-strong bg-background px-4 py-3">
+      <div className="flex items-center justify-between rounded-2xl border border-border-strong bg-background/60 px-4 py-3">
         <span className="text-sm text-foreground">Email me updates</span>
         <span className="relative h-5 w-9 shrink-0 rounded-full bg-accent" aria-hidden="true">
           <span className="absolute right-0.5 top-0.5 h-4 w-4 rounded-full bg-accent-foreground" />
@@ -55,7 +55,7 @@ const STEPS = [
 
 export function HowItWorks() {
   return (
-    <section className="bg-surface py-24">
+    <section className="bg-elevated py-24">
       <div className="mx-auto max-w-6xl px-4">
         <div className="max-w-xl">
           <p className="text-sm font-medium uppercase tracking-[0.25em] text-accent/70">

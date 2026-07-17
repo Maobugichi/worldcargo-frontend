@@ -8,7 +8,7 @@ import { ServiceCard } from "../components/ServiceCard";
 export function ServicesPage() {
   return (
     <main className="mx-auto max-w-5xl flex-1 px-4 py-24">
-      <p className="text-sm font-medium uppercase tracking-[0.25em] text-postal/70">
+      <p className="text-sm font-medium uppercase tracking-[0.25em] text-postal-tint/80">
         Directory
       </p>
       <h1 className="mt-4 font-display text-4xl font-medium leading-tight tracking-tight text-foreground sm:text-5xl">

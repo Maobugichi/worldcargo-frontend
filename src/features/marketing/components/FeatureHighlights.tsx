@@ -49,8 +49,8 @@ function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
       className="relative flex flex-col items-start"
     >
       {/* checkpoint marker, sits on top of the connecting route line */}
-      <div className="relative z-10 flex h-11 w-11 items-center justify-center rounded-full border border-postal/25 bg-background">
-        <feature.icon size={20} weight="bold" className="text-postal" aria-hidden="true" />
+      <div className="relative z-10 flex h-11 w-11 items-center justify-center rounded-full border border-postal-tint/30 bg-background">
+        <feature.icon size={20} weight="bold" className="text-postal-tint" aria-hidden="true" />
         {feature.live && (
           <span
             className="absolute -right-0.5 -top-0.5 h-2.5 w-2.5 rounded-full bg-status-progress ring-2 ring-background"
@@ -59,7 +59,7 @@ function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
         )}
       </div>
 
-      <p className="mt-4 font-mono text-xs uppercase tracking-[0.2em] text-postal/50">
+      <p className="mt-4 font-mono text-xs uppercase tracking-[0.2em] text-postal-tint/70">
         {feature.step}
       </p>
       <h3 className="mt-2 font-display text-2xl font-medium leading-tight text-foreground">
@@ -76,7 +76,7 @@ export function FeatureHighlights() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-24">
       <div className="mb-20 max-w-2xl">
-        <p className="text-sm font-medium uppercase tracking-[0.25em] text-postal/70">
+        <p className="text-sm font-medium uppercase tracking-[0.25em] text-postal-tint/80">
           Manifest
         </p>
         <h2 className="mt-4 font-display text-4xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-5xl">
@@ -93,7 +93,7 @@ export function FeatureHighlights() {
       <div className="relative grid grid-cols-1 gap-16 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
         {/* horizontal route line, desktop only, runs through icon centers */}
         <div
-          className="pointer-events-none absolute left-0 right-0 top-[22px] hidden border-t border-dashed border-postal/25 lg:block"
+          className="pointer-events-none absolute left-0 right-0 top-[22px] hidden border-t border-dashed border-postal-tint/25 lg:block"
           aria-hidden="true"
         />
         {FEATURES.map((feature, i) => (

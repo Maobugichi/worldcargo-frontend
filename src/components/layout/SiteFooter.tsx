@@ -6,12 +6,12 @@ export function SiteFooter() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border bg-surface">
+    <footer className="border-t border-border bg-elevated">
       <div className="mx-auto max-w-6xl px-4 py-12">
         <div className="flex flex-col gap-10 sm:flex-row sm:justify-between">
           <div>
             <p className="flex items-center gap-2 font-display text-lg font-semibold text-foreground">
-              <Package size={18} weight="bold" className="text-postal" aria-hidden="true" />
+              <Package size={18} weight="bold" className="text-postal-tint" aria-hidden="true" />
               {SITE_NAME}
             </p>
             <p className="mt-2 max-w-xs text-sm leading-relaxed text-foreground/50">

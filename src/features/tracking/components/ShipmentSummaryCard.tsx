@@ -4,7 +4,7 @@ import { StatusPill } from "./StatusPill";
 
 export function ShipmentSummaryCard({ shipment }: { shipment: ShipmentSummary }) {
   return (
-    <div className="relative w-full max-w-xl rounded-xl border border-border bg-surface p-6">
+    <div className="relative w-full max-w-xl rounded-xl border border-border bg-elevated p-6">
       <div className="flex items-start justify-between gap-4">
         <div>
           <p className="text-xs uppercase tracking-wide text-foreground/50">

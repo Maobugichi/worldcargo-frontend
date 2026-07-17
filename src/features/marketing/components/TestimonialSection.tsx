@@ -63,7 +63,7 @@ export function TestimonialsSection() {
       </div>
 
       <div className="max-w-xl">
-        <p className="text-sm font-medium uppercase tracking-[0.25em] text-postal/70">
+        <p className="text-sm font-medium uppercase tracking-[0.25em] text-postal-tint/80">
           Feedback
         </p>
         <h2 className="mt-4 font-display text-4xl font-medium leading-tight tracking-tight text-foreground sm:text-5xl">
@@ -82,7 +82,7 @@ export function TestimonialsSection() {
             className="glass-card rounded-2xl p-8"
           >
             <div className="flex items-center justify-between">
-              <span className="font-mono text-xs text-postal/50">
+              <span className="font-mono text-xs text-postal-tint/70">
                 REF · {String(i + 1).padStart(3, "0")}
               </span>
               <StarRating />
@@ -101,7 +101,7 @@ export function TestimonialsSection() {
                 />
               ) : (
                 <span
-                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-postal/10 text-sm font-medium text-postal"
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-postal text-sm font-medium text-postal-foreground"
                   aria-hidden="true"
                 >
                   {initials(testimonial.name)}

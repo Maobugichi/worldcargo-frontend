@@ -30,15 +30,14 @@ export function ServiceCard({
 }) {
   const Icon = serviceIcon(service.title);
   return (
-    <div className="relative border border-dashed border-border-strong bg-surface p-6">
-      {/* perforation notches — top and bottom, centered on the side edges */}
+    <div className="relative border border-dashed border-border-strong bg-elevated p-6">
       <span className="absolute -left-2.5 top-1/2 h-5 w-5 -translate-y-1/2 rounded-full bg-background" aria-hidden="true" />
       <span className="absolute -right-2.5 top-1/2 h-5 w-5 -translate-y-1/2 rounded-full bg-background" aria-hidden="true" />
       <div className="flex items-start justify-between">
         <div className="flex h-11 w-11 items-center justify-center rounded-full bg-postal">
           <Icon size={20} weight="bold" className="text-postal-foreground" aria-hidden="true" />
         </div>
-        <span className="font-mono text-xs tracking-[0.15em] text-postal/50">
+        <span className="font-mono text-xs tracking-[0.15em] text-foreground/50">
           {routingCode(service.title)}
         </span>
       </div>

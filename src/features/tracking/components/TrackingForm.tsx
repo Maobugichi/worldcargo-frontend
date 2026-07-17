@@ -19,7 +19,7 @@ export function TrackingForm({ onSubmit, isLoading }: TrackingFormProps) {
   }
 
   return (
-    <div className="w-full max-w-lg rounded-xl border border-border-strong bg-surface p-1.5">
+    <div className="w-full max-w-lg rounded-xl border border-border-strong bg-elevated p-1.5">
       <form
         onSubmit={handleSubmit}
         className="flex w-full flex-col items-stretch gap-2 sm:flex-row sm:items-center"
@@ -40,7 +40,7 @@ export function TrackingForm({ onSubmit, isLoading }: TrackingFormProps) {
         <button
           type="submit"
           disabled={isLoading || value.trim().length === 0}
-          className="shrink-0 rounded-xl bg-accent px-6 py-3 text-base font-medium text-accent-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
+          className="shrink-0 rounded-xl bg-electric px-6 py-3 text-base font-medium text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40"
         >
           {isLoading ? "Tracking..." : "Track shipment"}
         </button>

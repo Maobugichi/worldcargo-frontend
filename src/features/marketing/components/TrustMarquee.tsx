@@ -50,9 +50,6 @@ export function TrustMarquee() {
       setIsMobile(mobile);
 
       if (mobile) {
-        // No dwell pause on mobile, so there's no need to land on a clean
-        // item edge — use the full available width and let logos scroll
-        // past the container edge like a normal ticker.
         setViewportWidth(available);
       } else {
         const wholeItems = Math.max(1, Math.floor(available / ITEM_WIDTH));
@@ -80,14 +77,11 @@ export function TrustMarquee() {
         await controls;
         if (cancelled) return;
 
-        // Mobile never dwells — it's continuous, so a lone frozen logo
-        // never has a chance to happen. Desktop keeps the resting pause.
         if (!isMobile) {
           await new Promise((resolve) => setTimeout(resolve, PAUSE_DURATION * 1000));
           if (cancelled) return;
         }
 
-        // instant, synchronous reset — no animation, so nothing to hang on
         x.set(0);
       }
     }
@@ -100,7 +94,7 @@ export function TrustMarquee() {
   }, [x, isMobile]);
 
   return (
-    <section className="border-y border-border bg-surface py-8">
+    <section className="border-y border-border bg-elevated py-8">
       <div className="mx-auto max-w-6xl px-4">
         <p className="mb-6 text-center text-xs font-medium uppercase tracking-[0.14em] text-foreground/40">
           Trusted by teams at

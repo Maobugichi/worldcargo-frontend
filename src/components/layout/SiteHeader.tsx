@@ -13,13 +13,13 @@ export function SiteHeader() {
   const desktopLinks = NAV_LINKS.filter((link) => link.href !== "/track");
 
   return (
-    <header className="sticky top-0 z-[999] border-b border-border bg-surface">
+    <header className="sticky top-0 z-[999] border-b border-border bg-elevated">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
         <Link
           href="/"
           className="flex items-center gap-2 rounded-sm font-display text-lg font-semibold text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
         >
-          <Package size={20} weight="bold" className="text-postal" aria-hidden="true" />
+          <Package size={20} weight="bold" className="text-postal-tint" aria-hidden="true" />
           {SITE_NAME}
         </Link>
 
@@ -44,7 +44,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-3">
           <Link
             href="/track"
-            className="rounded-lg bg-accent px-4 py-2 text-sm font-medium text-accent-foreground transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            className="rounded-lg bg-electric px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-electric"
           >
             Track shipment
           </Link>

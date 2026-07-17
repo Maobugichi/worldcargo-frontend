@@ -33,7 +33,7 @@ export function ContactForm() {
   if (submitted) {
     return (
       <div
-        className="flex items-start gap-3 rounded-2xl border border-border bg-surface p-6"
+        className="flex items-start gap-3 rounded-2xl border border-border bg-elevated p-6"
         aria-live="polite"
       >
         <CheckCircle
@@ -60,7 +60,7 @@ export function ContactForm() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          className="w-full rounded-lg border border-border-strong bg-surface px-4 py-3 text-base text-foreground outline-none transition-colors focus:border-accent focus-visible:ring-2 focus-visible:ring-accent/30"
+          className="w-full rounded-lg border border-border-strong bg-elevated px-4 py-3 text-base text-foreground outline-none transition-colors focus:border-electric focus-visible:ring-2 focus-visible:ring-electric/30"
         />
       </div>
       <div>
@@ -73,7 +73,7 @@ export function ContactForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="w-full rounded-lg border border-border-strong bg-surface px-4 py-3 text-base text-foreground outline-none transition-colors focus:border-accent focus-visible:ring-2 focus-visible:ring-accent/30"
+          className="w-full rounded-lg border border-border-strong bg-elevated px-4 py-3 text-base text-foreground outline-none transition-colors focus:border-electric focus-visible:ring-2 focus-visible:ring-electric/30"
         />
       </div>
       <div>
@@ -86,7 +86,7 @@ export function ContactForm() {
           onChange={(e) => setMessage(e.target.value)}
           required
           rows={6}
-          className="w-full rounded-lg border border-border-strong bg-surface px-4 py-3 text-base text-foreground outline-none transition-colors focus:border-accent focus-visible:ring-2 focus-visible:ring-accent/30"
+          className="w-full rounded-lg border border-border-strong bg-elevated px-4 py-3 text-base text-foreground outline-none transition-colors focus:border-electric focus-visible:ring-2 focus-visible:ring-electric/30"
         />
       </div>
 
@@ -95,7 +95,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="rounded-lg bg-accent px-6 py-3 text-base font-medium text-accent-foreground transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:opacity-50"
+        className="rounded-lg bg-electric px-6 py-3 text-base font-medium text-white transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-electric disabled:opacity-50"
       >
         {isSubmitting ? "Sending..." : "Send message"}
       </button>
