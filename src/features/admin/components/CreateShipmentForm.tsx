@@ -44,8 +44,8 @@ export function CreateShipmentForm({ onCreated }: { onCreated: (shipment: Shipme
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-3 rounded-xl border border-foreground/10 bg-white p-5">
-      <h2 className="text-sm font-semibold">New shipment</h2>
+    <form onSubmit={handleSubmit} className="space-y-3 rounded-xl border border-border bg-elevated p-5">
+      <h2 className="text-sm font-semibold text-foreground">New shipment</h2>
 
       <div className="grid grid-cols-2 gap-3">
         <div>
@@ -54,7 +54,7 @@ export function CreateShipmentForm({ onCreated }: { onCreated: (shipment: Shipme
             value={origin}
             onChange={(e) => setOrigin(e.target.value)}
             required
-            className="w-full rounded-lg border border-foreground/15 px-3 py-2 text-sm outline-none focus:border-accent"
+            className="w-full rounded-lg border border-border-strong bg-elevated px-3 py-2 text-sm text-foreground outline-none focus:border-electric"
           />
         </div>
         <div>
@@ -63,7 +63,7 @@ export function CreateShipmentForm({ onCreated }: { onCreated: (shipment: Shipme
             value={destination}
             onChange={(e) => setDestination(e.target.value)}
             required
-            className="w-full rounded-lg border border-foreground/15 px-3 py-2 text-sm outline-none focus:border-accent"
+            className="w-full rounded-lg border border-border-strong bg-elevated px-3 py-2 text-sm text-foreground outline-none focus:border-electric"
           />
         </div>
       </div>
@@ -74,7 +74,7 @@ export function CreateShipmentForm({ onCreated }: { onCreated: (shipment: Shipme
           type="date"
           value={eta}
           onChange={(e) => setEta(e.target.value)}
-          className="w-full rounded-lg border border-foreground/15 px-3 py-2 text-sm outline-none focus:border-accent"
+          className="w-full rounded-lg border border-border-strong bg-elevated px-3 py-2 text-sm text-foreground outline-none focus:border-electric"
         />
       </div>
 
@@ -84,7 +84,7 @@ export function CreateShipmentForm({ onCreated }: { onCreated: (shipment: Shipme
           <input
             value={recipientName}
             onChange={(e) => setRecipientName(e.target.value)}
-            className="w-full rounded-lg border border-foreground/15 px-3 py-2 text-sm outline-none focus:border-accent"
+            className="w-full rounded-lg border border-border-strong bg-elevated px-3 py-2 text-sm text-foreground outline-none focus:border-electric"
           />
         </div>
         <div>
@@ -96,12 +96,12 @@ export function CreateShipmentForm({ onCreated }: { onCreated: (shipment: Shipme
               setRecipientEmail(e.target.value);
               if (!e.target.value) setEmailOptIn(false);
             }}
-            className="w-full rounded-lg border border-foreground/15 px-3 py-2 text-sm outline-none focus:border-accent"
+            className="w-full rounded-lg border border-border-strong bg-elevated px-3 py-2 text-sm text-foreground outline-none focus:border-electric"
           />
         </div>
       </div>
 
-      <label className="flex items-center gap-2 text-sm">
+      <label className="flex items-center gap-2 text-sm text-foreground">
         <input
           type="checkbox"
           checked={emailOptIn}
@@ -116,7 +116,7 @@ export function CreateShipmentForm({ onCreated }: { onCreated: (shipment: Shipme
       <button
         type="submit"
         disabled={isSubmitting}
-        className="rounded-lg bg-accent px-4 py-2 text-sm font-medium text-accent-foreground disabled:opacity-50"
+        className="rounded-lg bg-electric px-4 py-2 text-sm font-medium text-white disabled:opacity-50"
       >
         {isSubmitting ? "Creating..." : "Create shipment"}
       </button>

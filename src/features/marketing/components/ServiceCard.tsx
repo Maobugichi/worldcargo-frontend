@@ -1,3 +1,5 @@
+"use client"
+
 import { Package, Truck, Globe, Warehouse, Lightning, ShieldCheck, CheckCircle } from "@phosphor-icons/react/dist/ssr";
 import type { ServiceItem } from "../utils/placeholder-content";
 

@@ -30,23 +30,23 @@ export function LoginForm() {
   return (
     <form onSubmit={handleSubmit} className="w-full max-w-sm space-y-4">
       <div>
-        <label className="mb-1 block text-sm font-medium">Email</label>
+        <label className="mb-1 block text-sm font-medium text-foreground">Email</label>
         <input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="w-full rounded-lg border border-foreground/15 bg-white px-4 py-2.5 text-sm outline-none focus:border-accent"
+          className="w-full rounded-lg border border-border-strong bg-elevated px-4 py-2.5 text-sm text-foreground outline-none focus:border-electric"
         />
       </div>
       <div>
-        <label className="mb-1 block text-sm font-medium">Password</label>
+        <label className="mb-1 block text-sm font-medium text-foreground">Password</label>
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-          className="w-full rounded-lg border border-foreground/15 bg-white px-4 py-2.5 text-sm outline-none focus:border-accent"
+          className="w-full rounded-lg border border-border-strong bg-elevated px-4 py-2.5 text-sm text-foreground outline-none focus:border-electric"
         />
       </div>
 
@@ -55,7 +55,7 @@ export function LoginForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full rounded-lg bg-accent px-4 py-2.5 text-sm font-medium text-accent-foreground disabled:opacity-50"
+        className="w-full rounded-lg bg-electric px-4 py-2.5 text-sm font-medium text-white disabled:opacity-50"
       >
         {isSubmitting ? "Signing in..." : "Sign in"}
       </button>

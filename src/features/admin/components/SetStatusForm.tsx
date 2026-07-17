@@ -53,7 +53,7 @@ export function SetStatusForm({ shipmentId, currentStatus, onUpdated }: SetStatu
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-3 rounded-xl border border-border bg-surface p-5">
+    <form onSubmit={handleSubmit} className="space-y-3 rounded-xl border border-border bg-elevated p-5">
       <h2 className="text-sm font-semibold text-foreground">Update status</h2>
 
       <div>
@@ -64,7 +64,7 @@ export function SetStatusForm({ shipmentId, currentStatus, onUpdated }: SetStatu
           id="set-status-select"
           value={status}
           onChange={(e) => setStatus(e.target.value as ShipmentStatus)}
-          className="w-full rounded-lg border border-border-strong bg-surface px-3 py-2 text-sm text-foreground outline-none transition-colors focus:border-accent focus-visible:ring-2 focus-visible:ring-accent/30"
+          className="w-full rounded-lg border border-border-strong bg-elevated px-3 py-2 text-sm text-foreground outline-none transition-colors focus:border-electric focus-visible:ring-2 focus-visible:ring-electric/30"
         >
           {SHIPMENT_STATUSES.map((s) => (
             <option key={s} value={s}>
@@ -100,7 +100,7 @@ export function SetStatusForm({ shipmentId, currentStatus, onUpdated }: SetStatu
       <button
         type="submit"
         disabled={state === "submitting"}
-        className="rounded-lg bg-accent px-4 py-2 text-sm font-medium text-accent-foreground transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+        className="rounded-lg bg-electric px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-electric"
       >
         {state === "submitting" ? "Updating..." : "Update status"}
       </button>

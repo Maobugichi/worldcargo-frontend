@@ -17,10 +17,10 @@ export function ShipmentList({ shipments }: { shipments: Shipment[] }) {
 
   return (
     <div className="overflow-x-auto">
-      <table className="w-full min-w-[640px] text-left text-sm">
+      <table className="w-full min-w-[640px] text-left text-sm text-foreground">
         <thead>
-          <tr className="border-b border-foreground/10 text-foreground/50">
-            <th className="sticky left-0 z-10 bg-white font-medium">
+          <tr className="border-b border-border text-foreground/50">
+            <th className="sticky left-0 z-10 bg-elevated font-medium">
               Tracking number
             </th>
             <th className="py-2 font-medium">Status</th>
@@ -30,11 +30,11 @@ export function ShipmentList({ shipments }: { shipments: Shipment[] }) {
         </thead>
         <tbody>
           {shipments.map((shipment) => (
-            <tr key={shipment.id} className="border-b border-foreground/5">
-              <td className="sticky left-0 z-10 bg-white">
+            <tr key={shipment.id} className="border-b border-border">
+              <td className="sticky left-0 z-10 bg-elevated">
                 <Link
                   href={`/admin/shipments/${shipment.id}`}
-                  className="font-mono text-accent hover:underline"
+                  className="font-mono text-electric hover:underline"
                 >
                   {shipment.trackingNumber}
                 </Link>

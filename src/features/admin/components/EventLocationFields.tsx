@@ -31,8 +31,6 @@ export function EventLocationFields({
   coords,
   onCoordsChange,
 }: EventLocationFieldsProps) {
-  // useId keeps these unique even when SetStatusForm and AddEventForm
-  // render side by side on the same page.
   const locationId = useId();
   const noteId = useId();
 
@@ -48,7 +46,7 @@ export function EventLocationFields({
           onChange={(e) => onLocationChange(e.target.value)}
           required
           placeholder={locationPlaceholder}
-          className="w-full rounded-lg border border-border-strong bg-surface px-3 py-2 text-sm text-foreground outline-none transition-colors focus:border-accent focus-visible:ring-2 focus-visible:ring-accent/30"
+          className="w-full rounded-lg border border-border-strong bg-elevated px-3 py-2 text-sm text-foreground outline-none transition-colors focus:border-electric focus-visible:ring-2 focus-visible:ring-electric/30"
         />
       </div>
 
@@ -62,7 +60,7 @@ export function EventLocationFields({
           onChange={(e) => onNoteChange(e.target.value)}
           required
           placeholder={notePlaceholder}
-          className="w-full rounded-lg border border-border-strong bg-surface px-3 py-2 text-sm text-foreground outline-none transition-colors focus:border-accent focus-visible:ring-2 focus-visible:ring-accent/30"
+          className="w-full rounded-lg border border-border-strong bg-elevated px-3 py-2 text-sm text-foreground outline-none transition-colors focus:border-electric focus-visible:ring-2 focus-visible:ring-electric/30"
         />
       </div>
 
@@ -73,7 +71,7 @@ export function EventLocationFields({
             <button
               type="button"
               onClick={() => onCoordsChange(null)}
-              className="rounded-sm text-xs text-foreground/50 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className="rounded-sm text-xs text-foreground/50 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-electric"
             >
               Clear pin
             </button>

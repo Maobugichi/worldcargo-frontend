@@ -42,7 +42,7 @@ export function AddEventForm({ shipmentId, onAdded }: AddEventFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-3 rounded-xl border border-border bg-surface p-5">
+    <form onSubmit={handleSubmit} className="space-y-3 rounded-xl border border-border bg-elevated p-5">
       <div>
         <h2 className="text-sm font-semibold text-foreground">Add a note</h2>
         <p className="text-xs text-foreground/50">
@@ -75,7 +75,7 @@ export function AddEventForm({ shipmentId, onAdded }: AddEventFormProps) {
       <button
         type="submit"
         disabled={state === "submitting"}
-        className="rounded-lg border border-border-strong px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-background disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+        className="rounded-lg border border-border-strong px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-background disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-electric"
       >
         {state === "submitting" ? "Adding..." : "Add note"}
       </button>

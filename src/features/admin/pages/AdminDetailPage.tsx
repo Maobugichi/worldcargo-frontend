@@ -40,7 +40,7 @@ export function AdminShipmentDetailPage({ shipmentId }: { shipmentId: string }) 
         <button
           type="button"
           onClick={load}
-          className="mt-3 rounded-lg border border-border-strong px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-background focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          className="mt-3 rounded-lg border border-border-strong px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-background focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-electric"
         >
           Try again
         </button>
@@ -73,7 +73,7 @@ export function AdminShipmentDetailPage({ shipmentId }: { shipmentId: string }) 
         <AddEventForm shipmentId={shipment.id} onAdded={load} />
       </div>
 
-      <div className="rounded-xl border border-border bg-surface p-5">
+      <div className="rounded-xl border border-border bg-elevated p-5">
         <h2 className="mb-4 text-sm font-semibold text-foreground">Timeline</h2>
         <ShipmentTimeline events={shipment.events.map(toPublicTimelineEvent)} />
       </div>
