@@ -1,17 +1,21 @@
+"use client";
+
 import { Plus } from "@phosphor-icons/react/dist/ssr";
-import type { FaqItem } from "../utils/placeholder-content";
+import { useTranslations } from "next-intl";
+import type { FaqKey } from "../utils/placeholder-content";
 
 export function FaqAccordionItem({
-  faq,
+  faqKey,
   isOpen,
   onToggle,
   id,
 }: {
-  faq: FaqItem;
+  faqKey: FaqKey;
   isOpen: boolean;
   onToggle: () => void;
   id: string | number;
 }) {
+  const t = useTranslations("faqs");
   const buttonId = `faq-button-${id}`;
   const panelId = `faq-panel-${id}`;
 
@@ -26,7 +30,7 @@ export function FaqAccordionItem({
         className="flex w-full items-center justify-between gap-6 py-6 text-left"
       >
         <span className="font-display text-lg font-medium text-foreground sm:text-xl">
-          {faq.question}
+          {t(`${faqKey}.question`)}
         </span>
         <Plus
           size={18}
@@ -48,7 +52,7 @@ export function FaqAccordionItem({
       >
         <div className="min-h-0 overflow-hidden">
           <p className="max-w-2xl pb-6 text-base leading-relaxed text-foreground/60">
-            {faq.answer}
+            {t(`${faqKey}.answer`)}
           </p>
         </div>
       </div>

@@ -1,0 +1,196 @@
+{
+  "hero": {
+    "eyebrow": "Rastrea un paquete",
+    "title": "Envía a cualquier lugar. Rastrea todo.",
+    "description": "Infraestructura logística de nivel empresarial, en la que confían más de 10,000 empresas en todo el mundo para soluciones de entrega seguras, rápidas y confiables. Visibilidad en tiempo real desde la recogida hasta la entrega.",
+    "liveTracking": "Seguimiento en vivo, sin necesidad de cuenta",
+    "form": {
+      "trackingNumberLabel": "Número de seguimiento",
+      "placeholder": "Ingresa tu número de seguimiento",
+      "submit": "Rastrear envío",
+        "tabs": {
+          "track": "Rastrear",
+          "ship": "Enviar",
+          "quote": "Cotizar"
+        }
+    }
+  },
+  "howItWorks": {
+    "eyebrow": "Proceso",
+    "title": "Tres pasos. Sin necesidad de cuenta.",
+    "steps": {
+      "step1": { "title": "Ingresa tu número", "description": "Escribe tu número de seguimiento en el cuadro de búsqueda." },
+      "step2": { "title": "Consulta el estado en vivo", "description": "Consulta el estado actual, la ruta y el historial completo de eventos." },
+      "step3": { "title": "Recibe notificaciones", "description": "Suscríbete a las actualizaciones por correo para no tener que revisar manualmente." }
+    },
+    "mockup": {
+      "inTransit": "En tránsito",
+      "progress": "{current} de {total}",
+      "emailMeUpdates": "Notificarme por correo"
+    }
+  },
+  "featureHighlights": {
+    "eyebrow": "Manifiesto",
+    "title": "Cada envío sigue una ruta.\nY también cada motivo para confiar en él.",
+    "subtitle": "Cuatro puntos de control en el camino de \u201crecibido\u201d a \u201centregado.\u201d",
+    "features": {
+      "feature1": { "step": "Recibido", "title": "Actualizaciones en tiempo real", "description": "Consulta el estado de tu envío en el momento en que cambia, no horas después." },
+      "feature2": { "step": "Notificado", "title": "Notificaciones por correo", "description": "Suscríbete una vez y recibe un correo automático en cada cambio de estado." },
+      "feature3": { "step": "En tránsito", "title": "Cobertura nacional", "description": "Desde el centro de despacho hasta la entrega final, estés donde estés." },
+      "feature4": { "step": "Entregado", "title": "Entrega confiable", "description": "Cada envío queda registrado y rastreado desde el momento en que se recibe." }
+    }
+  },
+  "trustMarquee": {
+    "trustedBy": "Con la confianza de equipos en"
+  },
+  "testimonials": {
+    "eyebrow": "Opiniones",
+    "title": "Lo que dice la gente cuando llega.",
+    "ref": "REF · {number}",
+    "starRatingLabel": "5 de 5 estrellas"
+  },
+  "servicesTeaser": {
+    "eyebrow": "Directorio",
+    "title": "Qué transportamos, y cómo.",
+    "seeAll": "Ver todos los servicios"
+  },
+  "siteHeader": {
+    "trackShipment": "Rastrear envío",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "siteFooter": {
+    "tagline": "Seguimiento de envíos en tiempo real, desde el despacho hasta tu puerta.",
+    "navigate": "Navegación",
+    "contact": "Contacto",
+    "copyright": "© {year} {siteName}. Todos los derechos reservados."
+  },
+  "nav": {
+    "home": "Inicio",
+    "track": "Rastrear",
+    "services": "Servicios",
+    "about": "Nosotros",
+    "faq": "Preguntas",
+    "contact": "Contacto"
+  },
+  "services": {
+    "standardDelivery": {
+      "title": "Entrega Estándar",
+      "description": "Entrega confiable puerta a puerta a tarifas habituales.",
+      "features": ["Entrega en 3–5 días hábiles", "Seguimiento en tiempo real incluido", "Firma al momento de la entrega disponible"]
+    },
+    "expressDelivery": {
+      "title": "Entrega Exprés",
+      "description": "Entrega más rápida para envíos urgentes.",
+      "features": ["Entrega al día siguiente en la mayoría de las regiones", "Manejo prioritario en cada centro de distribución", "Alertas de estado por SMS y correo electrónico"]
+    },
+    "internationalShipping": {
+      "title": "Envíos Internacionales",
+      "description": "Entrega transfronteriza con seguimiento completo de principio a fin.",
+      "features": ["Documentación aduanera gestionada por nosotros", "Entrega a más de 150 países", "Seguimiento completo a través de fronteras"]
+    },
+    "freightBulk": {
+      "title": "Carga y Volumen",
+      "description": "Carga paletizada y a granel para envíos de gran volumen.",
+      "features": ["Opciones de carga completa y parcial", "Coordinador de carga dedicado", "Precios según volumen"]
+    },
+    "warehousingStorage": {
+      "title": "Almacenamiento",
+      "description": "Almacenamiento a corto y largo plazo con cumplimiento bajo demanda.",
+      "features": ["Instalaciones con climatización", "Recolección, empaque y envío a solicitud", "Visibilidad de inventario en vivo"]
+    },
+    "shipmentInsurance": {
+      "title": "Seguro de Envío",
+      "description": "Protección y cobertura adicional para envíos de alto valor.",
+      "features": ["Cobertura hasta el valor total declarado", "Procesamiento rápido de reclamos", "Sin trámites al momento de la entrega del paquete"]
+    }
+  },
+  "faqs": {
+    "tracking": { "question": "¿Cómo rastreo mi envío?", "answer": "Ingresa tu número de seguimiento en la página de inicio o en la página de Rastreo para ver su estado actual e historial completo." },
+    "trackingNotWorking": { "question": "Mi número de seguimiento no funciona. ¿Qué hago?", "answer": "Verifica que no haya errores en el número. Si aún así no funciona, contáctanos a través de la página de Contacto y lo revisaremos." },
+    "international": { "question": "¿Realizan envíos internacionales?", "answer": "Sí, contamos con envíos internacionales — consulta la página de Servicios para más detalles." },
+    "emailUpdates": { "question": "¿Cómo recibo actualizaciones por correo sobre mi envío?", "answer": "Al buscar tu número de seguimiento, verás la opción de ingresar tu correo electrónico para recibir notificaciones en cada cambio de estado." },
+    "deliveryTime": { "question": "¿Cuánto tiempo tarda la entrega?", "answer": "Los tiempos de entrega varían según el servicio y el destino. Consulta la fecha estimada de entrega en tu página de seguimiento." },
+    "exceptionStatus": { "question": "¿Qué pasa si mi paquete muestra un estado de excepción?", "answer": "Una excepción significa que hay un problema que requiere atención (por ejemplo, una retención aduanera o un retraso). Consulta el historial en tu página de seguimiento para más detalles, o contáctanos para recibir ayuda." }
+  },
+  "testimonialsData": {
+    "testimonial1": { "quote": "Tuve una retención aduanera en un envío internacional y en todo momento supe realmente qué estaba pasando, en lugar de solo adivinar. Solo por eso ya vale la pena.", "role": "Dueña de pequeño negocio" },
+    "testimonial2": { "quote": "Cambiamos las entregas salientes de nuestro almacén a este servicio después de demasiadas llamadas de clientes preguntando '¿dónde está mi paquete?'. Esas llamadas prácticamente desaparecieron.", "role": "Líder de operaciones, Bennett & Sons Logistics" },
+    "testimonial3": { "quote": "La entrega exprés realmente fue exprés. Mi paquete llegó un día antes de lo estimado, y recibí un correo en el momento en que salió del centro de distribución.", "role": "Cliente frecuente" }
+  },
+  "faqTeaser": {
+    "eyebrow": "Respuestas",
+    "title": "Preguntas frecuentes",
+    "seeAll": "Ver todas las preguntas"
+  },
+  "aboutPage": {
+    "banner": {
+      "title": "Sobre World Cargo Express",
+      "subtitle": "Conectando el mundo a través de una logística innovadora y una confiabilidad inquebrantable desde 1998."
+    },
+    "story": {
+      "eyebrow": "Nuestra historia",
+      "title": "Construido por personas que mueven cosas para vivir",
+      "imageAlt": "Nuestro equipo en acción",
+      "paragraphs": [
+        "Fundada en 1998 con una sola camioneta de reparto y la visión de simplificar el envío local, World Cargo Express ha estado a la vanguardia de la logística global desde 1998.",
+        "Reconocimos desde el principio que la tecnología revolucionaría la logística. Al invertir fuertemente en infraestructura de seguimiento e instalaciones de clasificación automatizadas, establecimos nuevos estándares de transparencia y velocidad.",
+        "Hoy en día, operamos una gran flota de vehículos y aeronaves, sirviendo a millones de clientes en más de 150 países. Aun así, nuestra misión principal sigue siendo la misma: cumplir tus promesas, a tiempo, siempre."
+      ]
+    },
+    "metrics": {
+      "countries": "Países Atendidos",
+      "employees": "Empleados a Nivel Mundial",
+      "dailyDeliveries": "Entregas Diarias",
+      "yearsExperience": "Años de Experiencia"
+    },
+    "team": {
+      "eyebrow": "Equipo",
+      "title": "Conoce al equipo",
+      "roles": {
+        "ceo": "Director Ejecutivo",
+        "coo": "Director de Operaciones",
+        "vpLogistics": "VP de Logística"
+      }
+    },
+    "values": {
+      "reliability": { "title": "Confiabilidad", "description": "Cada envío es rastreado y contabilizado, de principio a fin." },
+      "transparency": { "title": "Transparencia", "description": "Siempre sabes exactamente cómo van las cosas — sin conjeturas." },
+      "speed": { "title": "Velocidad", "description": "Entrega rápida y confiable, en todo momento." }
+    }
+  },
+  "contactForm": {
+    "thanks": "Gracias, {name} — nos pondremos en contacto contigo pronto.",
+    "thanksFallbackName": "amigo",
+    "nameLabel": "Nombre",
+    "emailLabel": "Correo electrónico",
+    "messageLabel": "Mensaje",
+    "genericError": "Ocurrió un error al enviar tu mensaje.",
+    "sending": "Enviando...",
+    "send": "Enviar mensaje"
+  },
+  "contactSection": {
+    "eyebrow": "Contacto",
+    "title": "¿Aún tienes preguntas?",
+    "description": "Envíanos un mensaje y te responderemos directamente."
+  },
+  "contactPage": {
+    "eyebrow": "Contacto",
+    "title": "Contáctanos",
+    "subtitle": "Preguntas sobre un envío o cualquier otra cosa — envíanos un mensaje.",
+    "customerService": "Servicio al Cliente",
+    "availability": "Disponible 24/7",
+    "emailSupport": "Soporte por Correo",
+    "replyTime": "Respondemos en 2 horas",
+    "headquarters": "Sede Central"
+  },
+  "faqPage": {
+    "eyebrow": "Respuestas",
+    "title": "Preguntas frecuentes"
+  },
+  "servicesPage": {
+    "eyebrow": "Directorio",
+    "title": "Servicios",
+    "description": "Lo que ofrecemos, desde entregas cotidianas hasta envíos internacionales."
+  }
+}

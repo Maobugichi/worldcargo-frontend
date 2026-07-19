@@ -1,0 +1,196 @@
+{
+  "hero": {
+    "eyebrow": "荷物を追跡",
+    "title": "どこへでも配送。すべてを追跡。",
+    "description": "世界中の10,000社以上の企業から信頼される、エンタープライズグレードの物流インフラ。安全・迅速・確実な配送ソリューションと、集荷から配達までのリアルタイムの可視性を提供します。",
+    "liveTracking": "アカウント不要のライブ追跡",
+    "form": {
+      "trackingNumberLabel": "追跡番号",
+      "placeholder": "追跡番号を入力してください",
+      "submit": "荷物を追跡",
+       "tabs": {
+          "track": "追跡",
+          "ship": "配送",
+          "quote": "見積もり"
+        }
+    }
+  },
+  "howItWorks": {
+    "eyebrow": "プロセス",
+    "title": "3つのステップ。アカウント登録は不要です。",
+    "steps": {
+      "step1": { "title": "追跡番号を入力", "description": "検索ボックスに追跡番号を入力してください。" },
+      "step2": { "title": "リアルタイムの状況を確認", "description": "現在の状況、ルート、すべてのイベント履歴を確認できます。" },
+      "step3": { "title": "通知を受け取る", "description": "メール通知を有効にすれば、手動で確認する必要がなくなります。" }
+    },
+    "mockup": {
+      "inTransit": "配送中",
+      "progress": "{total}件中{current}件目",
+      "emailMeUpdates": "メールで通知を受け取る"
+    }
+  },
+  "featureHighlights": {
+    "eyebrow": "マニフェスト",
+    "title": "すべての荷物にはルートがあります。\n信頼できる理由も同じです。",
+    "subtitle": "「受付」から「配達完了」までの4つのチェックポイント。",
+    "features": {
+      "feature1": { "step": "受付", "title": "リアルタイム更新", "description": "荷物の状況が変わった瞬間に確認できます。数時間後ではありません。" },
+      "feature2": { "step": "通知設定", "title": "メール通知", "description": "一度設定するだけで、状況が変わるたびに自動でメールが届きます。" },
+      "feature3": { "step": "配送中", "title": "全国対応", "description": "発送拠点から最終配達まで、どこにいても対応します。" },
+      "feature4": { "step": "配達完了", "title": "確実な配達", "description": "すべての荷物は受付の瞬間から記録・追跡されます。" }
+    }
+  },
+  "trustMarquee": {
+    "trustedBy": "導入企業"
+  },
+  "testimonials": {
+    "eyebrow": "お客様の声",
+    "title": "届いたときのお客様の声。",
+    "ref": "REF・{number}",
+    "starRatingLabel": "5つ星中5つ"
+  },
+  "servicesTeaser": {
+    "eyebrow": "サービス一覧",
+    "title": "何を、どのように輸送するか。",
+    "seeAll": "すべてのサービスを見る"
+  },
+  "siteHeader": {
+    "trackShipment": "荷物を追跡",
+    "openMenu": "メニューを開く",
+    "closeMenu": "メニューを閉じる"
+  },
+  "siteFooter": {
+    "tagline": "発送から玄関先まで、リアルタイムで追跡。",
+    "navigate": "ナビゲーション",
+    "contact": "お問い合わせ",
+    "copyright": "© {year} {siteName} 全著作権所有。"
+  },
+  "nav": {
+    "home": "ホーム",
+    "track": "追跡",
+    "services": "サービス",
+    "about": "会社情報",
+    "faq": "よくある質問",
+    "contact": "お問い合わせ"
+  },
+  "services": {
+    "standardDelivery": {
+      "title": "標準配送",
+      "description": "通常料金での信頼できる戸口配送。",
+      "features": ["3〜5営業日でのお届け", "リアルタイム追跡が含まれます", "受け取り時のサイン確認も可能"]
+    },
+    "expressDelivery": {
+      "title": "速達配送",
+      "description": "急ぎの荷物向けのスピード配送。",
+      "features": ["ほとんどの地域で翌日配送", "各拠点での優先取り扱い", "SMSとメールでの状況通知"]
+    },
+    "internationalShipping": {
+      "title": "国際配送",
+      "description": "全行程を追跡できる国境を越えた配送。",
+      "features": ["通関書類の手続きを代行", "150か国以上へお届け", "国境をまたいだ全行程の追跡"]
+    },
+    "freightBulk": {
+      "title": "貨物・大量輸送",
+      "description": "大量輸送向けのパレット貨物・バルク輸送。",
+      "features": ["貸切・混載の選択が可能", "専任の貨物コーディネーター", "輸送量に応じた料金設定"]
+    },
+    "warehousingStorage": {
+      "title": "倉庫・保管",
+      "description": "短期・長期保管とオンデマンドでの出荷対応。",
+      "features": ["空調管理された保管施設", "ピッキング・梱包・発送をご要望に応じて対応", "リアルタイムの在庫確認"]
+    },
+    "shipmentInsurance": {
+      "title": "配送保険",
+      "description": "高額な荷物向けの追加保護と補償。",
+      "features": ["申告価格全額までの補償", "迅速な保険金請求手続き", "発送時の書類手続き不要"]
+    }
+  },
+  "faqs": {
+    "tracking": { "question": "荷物はどうやって追跡しますか？", "answer": "ホームページまたは追跡ページで追跡番号を入力すると、現在の状況と全履歴を確認できます。" },
+    "trackingNotWorking": { "question": "追跡番号が機能しません。どうすればいいですか？", "answer": "入力ミスがないか番号をご確認ください。それでも機能しない場合は、お問い合わせページからご連絡いただければ確認いたします。" },
+    "international": { "question": "国際配送は行っていますか？", "answer": "はい、国際配送をご利用いただけます。詳細はサービスページをご覧ください。" },
+    "emailUpdates": { "question": "荷物についてのメール通知はどうすれば受け取れますか？", "answer": "追跡番号を検索すると、メールアドレスを入力して状況変化のたびに通知を受け取るオプションが表示されます。" },
+    "deliveryTime": { "question": "配送にはどれくらい時間がかかりますか？", "answer": "配送時間はサービスと配送先によって異なります。追跡ページに表示される配送予定日をご確認ください。" },
+    "exceptionStatus": { "question": "荷物が「例外」ステータスになっている場合はどうすればいいですか？", "answer": "例外ステータスは、対応が必要な問題（通関保留や遅延など）が発生していることを意味します。追跡ページの履歴で詳細をご確認いただくか、お問い合わせください。" }
+  },
+  "testimonialsData": {
+    "testimonial1": { "quote": "国際配送で通関保留になったとき、推測ではなく実際に何が起きているかをずっと把握できました。それだけでも十分価値があります。", "role": "小規模事業のオーナー" },
+    "testimonial2": { "quote": "「荷物はどこですか」というお客様からの問い合わせが続いたため、倉庫の出荷配送をこちらに切り替えました。そうした問い合わせはほとんどなくなりました。", "role": "Bennett & Sons Logistics 業務責任者" },
+    "testimonial3": { "quote": "速達配送は本当に速達でした。予定より1日早く届き、拠点を出た瞬間にメールが届きました。", "role": "頻繁に配送を利用するお客様" }
+  },
+  "faqTeaser": {
+    "eyebrow": "回答",
+    "title": "よくある質問",
+    "seeAll": "すべての質問を見る"
+  },
+  "aboutPage": {
+    "banner": {
+      "title": "World Cargo Expressについて",
+      "subtitle": "1998年以来、革新的な物流と揺るぎない信頼性で世界をつないでいます。"
+    },
+    "story": {
+      "eyebrow": "私たちの歩み",
+      "title": "荷物を運ぶことを生業とする人々によって築かれた会社",
+      "imageAlt": "働く私たちのチーム",
+      "paragraphs": [
+        "1998年、1台の配送バンと地域配送を簡素化するというビジョンから始まったWorld Cargo Expressは、それ以来グローバル物流の最前線に立ってきました。",
+        "私たちは早い段階からテクノロジーが物流を変革すると認識していました。追跡インフラと自動仕分け施設に多大な投資を行い、透明性とスピードの新たな基準を確立しました。",
+        "現在では、大規模な車両・航空機の輸送網を運用し、150か国以上の何百万ものお客様にサービスを提供しています。それでも、私たちの使命は変わりません。約束を、いつでも時間通りにお届けすることです。"
+      ]
+    },
+    "metrics": {
+      "countries": "対応国数",
+      "employees": "全世界の従業員数",
+      "dailyDeliveries": "1日あたりの配送件数",
+      "yearsExperience": "事業年数"
+    },
+    "team": {
+      "eyebrow": "チーム",
+      "title": "チーム紹介",
+      "roles": {
+        "ceo": "最高経営責任者",
+        "coo": "最高執行責任者",
+        "vpLogistics": "物流担当副社長"
+      }
+    },
+    "values": {
+      "reliability": { "title": "信頼性", "description": "すべての荷物を、最初から最後まで追跡・管理します。" },
+      "transparency": { "title": "透明性", "description": "推測に頼ることなく、常に状況を正確に把握できます。" },
+      "speed": { "title": "スピード", "description": "いつでも迅速で確実な配送を。" }
+    }
+  },
+  "contactForm": {
+    "thanks": "{name}様、ありがとうございます — 折り返しご連絡いたします。",
+    "thanksFallbackName": "お客様",
+    "nameLabel": "お名前",
+    "emailLabel": "メールアドレス",
+    "messageLabel": "メッセージ",
+    "genericError": "メッセージの送信中にエラーが発生しました。",
+    "sending": "送信中...",
+    "send": "メッセージを送信"
+  },
+  "contactSection": {
+    "eyebrow": "お問い合わせ",
+    "title": "まだご質問がありますか？",
+    "description": "メッセージをお送りいただければ、直接ご返信いたします。"
+  },
+  "contactPage": {
+    "eyebrow": "お問い合わせ",
+    "title": "お問い合わせ",
+    "subtitle": "荷物に関するご質問など、お気軽にメッセージをお送りください。",
+    "customerService": "カスタマーサービス",
+    "availability": "24時間365日対応",
+    "emailSupport": "メールサポート",
+    "replyTime": "2時間以内に返信いたします",
+    "headquarters": "本社"
+  },
+  "faqPage": {
+    "eyebrow": "回答",
+    "title": "よくある質問"
+  },
+  "servicesPage": {
+    "eyebrow": "サービス一覧",
+    "title": "サービス",
+    "description": "日常の配送から国際配送まで、私たちが提供するサービス。"
+  }
+}

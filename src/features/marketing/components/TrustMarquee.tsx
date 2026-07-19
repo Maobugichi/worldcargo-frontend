@@ -1,8 +1,8 @@
-// components/TrustMarquee.tsx
 "use client";
 
 import { useEffect, useRef, useState } from "react";
 import { animate, motion, useMotionValue, type AnimationPlaybackControls } from "motion/react";
+import { useTranslations } from "next-intl";
 import { SiShopify, SiTesla, SiUnilever, SiNike, SiSpotify } from "react-icons/si";
 import type { IconType } from "react-icons";
 
@@ -16,11 +16,11 @@ const brands: Brand[] = [
   { name: "Spotify", icon: SiSpotify },
 ];
 
-const ITEM_WIDTH = 220; // fixed cell width — every logo occupies identical space
+const ITEM_WIDTH = 220;
 const SET_WIDTH = ITEM_WIDTH * brands.length;
-const SLIDE_DURATION = 18; // seconds per lap
-const PAUSE_DURATION = 15; // seconds dwell — desktop only, see loop()
-const MOBILE_BREAKPOINT = 640; // matches Tailwind's `sm`
+const SLIDE_DURATION = 18;
+const PAUSE_DURATION = 15;
+const MOBILE_BREAKPOINT = 640;
 
 function BrandItem({ brand }: { brand: Brand }) {
   const Icon = brand.icon;
@@ -38,6 +38,7 @@ function BrandItem({ brand }: { brand: Brand }) {
 }
 
 export function TrustMarquee() {
+  const t = useTranslations("trustMarquee");
   const measureRef = useRef<HTMLDivElement>(null);
   const [viewportWidth, setViewportWidth] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -97,7 +98,7 @@ export function TrustMarquee() {
     <section className="border-y border-border bg-elevated py-8">
       <div className="mx-auto max-w-6xl px-4">
         <p className="mb-6 text-center text-xs font-medium uppercase tracking-[0.14em] text-foreground/40">
-          Trusted by teams at
+          {t("trustedBy")}
         </p>
 
         <div ref={measureRef} className="w-full">

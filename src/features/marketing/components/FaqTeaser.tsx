@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { CaretRight } from "@phosphor-icons/react/dist/ssr";
-import { FAQS } from "../utils/placeholder-content";
+import { FAQ_KEYS } from "../utils/placeholder-content";
 import { FaqAccordionItem } from "../components/FaqAccordionItem";
 
 export function FaqTeaser() {
-  const topThree = FAQS.slice(0, 3);
+  const t = useTranslations("faqTeaser");
+  const topThree = FAQ_KEYS.slice(0, 3);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
@@ -15,18 +17,18 @@ export function FaqTeaser() {
       <div className="mx-auto max-w-3xl px-4">
         <div className="max-w-xl">
           <p className="text-sm font-medium uppercase tracking-[0.25em] text-postal-tint/80">
-            Answers
+            {t("eyebrow")}
           </p>
           <h2 className="mt-4 font-display text-4xl font-medium leading-tight tracking-tight text-foreground sm:text-5xl">
-            Frequently asked questions
+            {t("title")}
           </h2>
         </div>
 
         <div className="mt-14 border-t border-border">
-          {topThree.map((faq, i) => (
+          {topThree.map((faqKey, i) => (
             <FaqAccordionItem
-              key={faq.question}
-              faq={faq}
+              key={faqKey}
+              faqKey={faqKey}
               id={i}
               isOpen={openIndex === i}
               onToggle={() => setOpenIndex(openIndex === i ? null : i)}
@@ -35,11 +37,8 @@ export function FaqTeaser() {
         </div>
 
         <div className="mt-8 flex justify-center">
-          <Link
-            href="/faq"
-            className="group inline-flex items-center gap-1.5 text-sm font-medium text-electric"
-          >
-            See all questions
+          <Link href="/faq" className="group inline-flex items-center gap-1.5 text-sm font-medium text-electric">
+            {t("seeAll")}
             <CaretRight
               size={14}
               weight="bold"

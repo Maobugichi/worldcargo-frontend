@@ -1,12 +1,14 @@
 "use client";
 
 import { motion } from "motion/react";
+import { useTranslations } from "next-intl";
 import { HeroTrackerForm } from "./HeroTrackerForm";
 
 export function HeroSection() {
+  const t = useTranslations("hero");
+
   return (
     <section className="relative overflow-hidden px-4 py-24 sm:py-32">
-      {/* faint route arc — the journey motif this whole page is built around */}
       <svg
         className="pointer-events-none absolute inset-0 -z-10 h-full w-full text-postal/10"
         preserveAspectRatio="none"
@@ -30,7 +32,7 @@ export function HeroSection() {
           transition={{ duration: 0.4, ease: "easeOut" }}
           className="text-sm font-medium uppercase tracking-[0.25em] text-foreground/70"
         >
-          Track a parcel
+          {t("eyebrow")}
         </motion.p>
 
         <motion.h1
@@ -39,8 +41,7 @@ export function HeroSection() {
           transition={{ duration: 0.5, delay: 0.05, ease: "easeOut" }}
           className="max-w-2xl font-display text-5xl font-medium leading-[1.05] tracking-tight text-electric sm:text-6xl lg:text-7xl"
         >
-        Ship Anywhere.
-          Track Everything.
+          {t("title")}
         </motion.h1>
 
         <motion.p
@@ -49,7 +50,7 @@ export function HeroSection() {
           transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
           className="max-w-lg text-lg leading-relaxed text-foreground/60"
         >
-          Enterprise-grade logistics infrastructure trusted by 10,000+ businesses worldwide for secure, fast, and reliable delivery solutions. Real-time visibility from pickup to delivery.
+          {t("description")}
         </motion.p>
 
         <motion.div
@@ -58,13 +59,11 @@ export function HeroSection() {
           transition={{ duration: 0.5, delay: 0.15, ease: "easeOut" }}
           className="w-full max-w-xl"
         >
-          <div className="rounded-2xl border border-border-strong bg-surface p-3 transition-colors focus-within:border-accent focus-within:ring-2 focus-within:ring-accent/30">
-            <HeroTrackerForm />
-          </div>
+          <HeroTrackerForm />
 
           <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1.5 text-xs text-foreground/60">
             <span className="h-1.5 w-1.5 rounded-full bg-status-progress" aria-hidden="true" />
-            Live tracking, no account needed
+            {t("liveTracking")}
           </div>
         </motion.div>
       </div>

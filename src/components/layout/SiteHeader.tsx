@@ -4,12 +4,15 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
+import { useTranslations } from "next-intl";
 import { Package, List, X } from "@phosphor-icons/react";
 import { NAV_LINKS, SITE_NAME } from "@/lib/site-nav";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
+  const t = useTranslations();
   const desktopLinks = NAV_LINKS.filter((link) => link.href !== "/track");
 
   return (
@@ -35,23 +38,24 @@ export function SiteHeader() {
                   isActive ? "font-medium text-foreground" : "text-foreground/70 hover:text-foreground"
                 }`}
               >
-                {link.label}
+                {t(`nav.${link.key}`)}
               </Link>
             );
           })}
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link
+          <LanguageSwitcher />
+             <Link
             href="/track"
-            className="rounded-lg bg-electric px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-electric"
+            className="rounded-lg bg-electric px-4 py-2 hidden lg:block text-sm font-medium text-white transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-electric"
           >
-            Track shipment
+            {t("siteHeader.trackShipment")}
           </Link>
 
           <button
             onClick={() => setIsMenuOpen((prev) => !prev)}
-            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-label={isMenuOpen ? t("siteHeader.closeMenu") : t("siteHeader.openMenu")}
             aria-expanded={isMenuOpen}
             className="rounded-sm text-foreground/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent md:hidden"
           >
@@ -87,10 +91,17 @@ export function SiteHeader() {
                       : "text-foreground/70 hover:bg-background hover:text-foreground"
                   }`}
                 >
-                  {link.label}
+                  {t(`nav.${link.key}`)}
                 </Link>
+
               );
             })}
+              <Link
+            href="/track"
+            className="rounded-lg bg-electric px-4 py-2 text-center text-sm font-medium text-white transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-electric"
+          >
+            {t("siteHeader.trackShipment")}
+          </Link>
           </motion.nav>
         )}
       </AnimatePresence>

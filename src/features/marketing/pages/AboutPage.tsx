@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import { motion } from "motion/react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import {
   GlobeHemisphereWest,
@@ -10,47 +11,31 @@ import {
   CalendarBlank,
 } from "@phosphor-icons/react";
 
-const VALUES = [
-  {
-    code: "RE",
-    title: "Reliability",
-    description: "Every shipment tracked and accounted for, start to finish.",
-  },
-  {
-    code: "TR",
-    title: "Transparency",
-    description: "You always know exactly where things stand — no guesswork.",
-  },
-  {
-    code: "SP",
-    title: "Speed",
-    description: "Fast, dependable delivery, every time.",
-  },
+const VALUE_KEYS = ["reliability", "transparency", "speed"] as const;
+const VALUE_CODES: Record<(typeof VALUE_KEYS)[number], string> = {
+  reliability: "RE",
+  transparency: "TR",
+  speed: "SP",
+};
+
+const METRIC_KEYS = ["countries", "employees", "dailyDeliveries", "yearsExperience"] as const;
+const METRICS: Array<{
+  key: (typeof METRIC_KEYS)[number];
+  icon: typeof GlobeHemisphereWest;
+  value: number;
+  suffix: string;
+}> = [
+  { key: "countries", icon: GlobeHemisphereWest, value: 150, suffix: "+" },
+  { key: "employees", icon: Users, value: 45, suffix: "k+" },
+  { key: "dailyDeliveries", icon: Truck, value: 2, suffix: "M+" },
+  { key: "yearsExperience", icon: CalendarBlank, value: 25, suffix: "+" },
 ];
 
-const METRICS = [
-  { icon: GlobeHemisphereWest, value: 150, suffix: "+", label: "Countries Served" },
-  { icon: Users, value: 45, suffix: "k+", label: "Global Employees" },
-  { icon: Truck, value: 2, suffix: "M+", label: "Daily Deliveries" },
-  { icon: CalendarBlank, value: 25, suffix: "+", label: "Years Experience" },
-];
-
-const TEAM = [
-  {
-    name: "Bradley Henderson",
-    role: "Chief Executive Officer",
-    image: "/mostafa.jpg",
-  },
-  {
-    name: "Dominic Hayes",
-    role: "Chief Operating Officer",
-    image: "/makeen.jpg",
-  },
-  {
-    name: "Ian Gallagher",
-    role: "VP, Logistics",
-    image: "/diego.jpg",
-  },
+const TEAM_ROLE_KEYS = ["ceo", "coo", "vpLogistics"] as const;
+const TEAM: Array<{ name: string; roleKey: (typeof TEAM_ROLE_KEYS)[number]; image: string }> = [
+  { name: "Bradley Henderson", roleKey: "ceo", image: "/mostafa.jpg" },
+  { name: "Dominic Hayes", roleKey: "coo", image: "/makeen.jpg" },
+  { name: "Ian Gallagher", roleKey: "vpLogistics", image: "/diego.jpg" },
 ];
 
 function StatCounter({ value, suffix }: { value: number; suffix: string }) {
@@ -87,6 +72,9 @@ function StatCounter({ value, suffix }: { value: number; suffix: string }) {
 }
 
 export function AboutPage() {
+  const t = useTranslations("aboutPage");
+  const paragraphs = t.raw("story.paragraphs") as string[];
+
   return (
     <main className="flex-1">
       {/* Banner */}
@@ -105,12 +93,11 @@ export function AboutPage() {
           />
         </svg>
         <div className="relative mx-auto max-w-3xl px-4 text-center">
-         
           <h1 className="mt-4 font-display text-5xl font-medium leading-tight tracking-tight text-postal-foreground sm:text-6xl">
-            About World Cargo Express
+            {t("banner.title")}
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-postal-foreground/70">
-            Connecting the world through innovative logistics and unwavering reliability since 1998.
+            {t("banner.subtitle")}
           </p>
         </div>
       </section>
@@ -125,18 +112,16 @@ export function AboutPage() {
             transition={{ duration: 0.45, ease: "easeOut" }}
           >
             <p className="text-sm font-medium uppercase tracking-[0.25em] text-postal-tint/80">
-              Our story
+              {t("story.eyebrow")}
             </p>
             <h2 className="mt-4 font-display text-4xl font-medium leading-tight tracking-tight text-foreground sm:text-5xl">
-              Built by people who move things for a living
+              {t("story.title")}
             </h2>
-            <p className="mt-5 max-w-md text-base leading-relaxed text-foreground/60">
-              Founded in 1998 with a single delivery van and a vision to simplify local shipping, World Cargo Express has been at the forefront of global logistics since 1998.
-
-We recognized early on that technology would revolutionize logistics. By investing heavily in tracking infrastructure and automated sorting facilities, we set new standards for transparency and speed.
-
-Today, we operate a massive fleet of vehicles and aircraft, serving millions of customers across 150+ countries. Yet, our core mission remains unchanged: to deliver your promises, on time, every time.
-            </p>
+            <div className="mt-5 max-w-md space-y-4 text-base leading-relaxed text-foreground/60">
+              {paragraphs.map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
+            </div>
           </motion.div>
 
           <motion.div
@@ -148,7 +133,7 @@ Today, we operate a massive fleet of vehicles and aircraft, serving millions of 
           >
             <Image
               src="/william.jpg"
-              alt="Our team at work"
+              alt={t("story.imageAlt")}
               fill
               sizes="(min-width: 640px) 50vw, 100vw"
               className="object-cover"
@@ -163,7 +148,7 @@ Today, we operate a massive fleet of vehicles and aircraft, serving millions of 
               const Icon = metric.icon;
               return (
                 <motion.div
-                  key={metric.label}
+                  key={metric.key}
                   initial={{ opacity: 0, y: 12 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-80px" }}
@@ -177,7 +162,7 @@ Today, we operate a massive fleet of vehicles and aircraft, serving millions of 
                     <StatCounter value={metric.value} suffix={metric.suffix} />
                   </div>
                   <p className="mt-1 text-sm uppercase tracking-[0.15em] text-foreground/50">
-                    {metric.label}
+                    {t(`metrics.${metric.key}`)}
                   </p>
                 </motion.div>
               );
@@ -188,16 +173,16 @@ Today, we operate a massive fleet of vehicles and aircraft, serving millions of 
         {/* Meet the team */}
         <section className="border-t border-border py-24">
           <p className="text-sm font-medium uppercase tracking-[0.25em] text-postal-tint/80">
-            Team
+            {t("team.eyebrow")}
           </p>
           <h2 className="mt-4 font-display text-3xl font-medium leading-tight tracking-tight text-foreground sm:text-4xl">
-            Meet the team
+            {t("team.title")}
           </h2>
 
           <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3">
             {TEAM.map((member, i) => (
               <motion.div
-                key={member.name + i}
+                key={member.name}
                 initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
@@ -214,11 +199,9 @@ Today, we operate a massive fleet of vehicles and aircraft, serving millions of 
                   />
                 </div>
                 <div className="flex flex-1 flex-col items-start justify-center px-4">
-                  <p className="font-display text-lg font-medium text-foreground">
-                    {member.name}
-                  </p>
+                  <p className="font-display text-lg font-medium text-foreground">{member.name}</p>
                   <p className="mt-0.5 text-xs uppercase tracking-[0.15em] text-foreground/50">
-                    {member.role}
+                    {t(`team.roles.${member.roleKey}`)}
                   </p>
                 </div>
               </motion.div>
@@ -228,9 +211,9 @@ Today, we operate a massive fleet of vehicles and aircraft, serving millions of 
 
         {/* Values */}
         <div className="border-t border-border pb-24">
-          {VALUES.map((value, i) => (
+          {VALUE_KEYS.map((valueKey, i) => (
             <motion.div
-              key={value.title}
+              key={valueKey}
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
@@ -238,14 +221,14 @@ Today, we operate a massive fleet of vehicles and aircraft, serving millions of 
               className="flex flex-col gap-2 border-b border-border py-7 sm:flex-row sm:items-baseline sm:gap-8"
             >
               <span className="font-mono text-sm text-postal-tint/70 sm:w-14 sm:shrink-0">
-                {value.code}
+                {VALUE_CODES[valueKey]}
               </span>
               <div>
                 <p className="font-display text-xl font-medium text-foreground">
-                  {value.title}
+                  {t(`values.${valueKey}.title`)}
                 </p>
                 <p className="mt-1.5 max-w-md text-base leading-relaxed text-foreground/60">
-                  {value.description}
+                  {t(`values.${valueKey}.description`)}
                 </p>
               </div>
             </motion.div>

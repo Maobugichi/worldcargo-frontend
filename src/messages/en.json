@@ -1,0 +1,196 @@
+{
+  "hero": {
+    "eyebrow": "Track a parcel",
+    "title": "Ship Anywhere. Track Everything.",
+    "description": "Enterprise-grade logistics infrastructure trusted by 10,000+ businesses worldwide for secure, fast, and reliable delivery solutions. Real-time visibility from pickup to delivery.",
+    "liveTracking": "Live tracking, no account needed",
+    "form": {
+      "trackingNumberLabel": "Tracking number",
+      "placeholder": "Enter your tracking number",
+      "submit": "Track shipment",
+      "tabs": {
+        "track": "Track",
+        "ship": "Ship",
+        "quote": "Quote"
+      }
+    }
+  },
+  "howItWorks": {
+    "eyebrow": "Process",
+    "title": "Three steps. No account required.",
+    "steps": {
+      "step1": { "title": "Enter your number", "description": "Type your tracking number into the search box." },
+      "step2": { "title": "See live status", "description": "View the current status, route, and full event timeline." },
+      "step3": { "title": "Get notified", "description": "Opt in to email updates so you never have to check manually." }
+    },
+    "mockup": {
+      "inTransit": "In transit",
+      "progress": "{current} of {total}",
+      "emailMeUpdates": "Email me updates"
+    }
+  },
+  "featureHighlights": {
+    "eyebrow": "Manifest",
+    "title": "Every shipment follows a route.\nSo does every reason to trust it.",
+    "subtitle": "Four checkpoints on the way from \u201creceived\u201d to \u201cdelivered.\u201d",
+    "features": {
+      "feature1": { "step": "Received", "title": "Real-time updates", "description": "See your shipment's status the moment it changes, not hours later." },
+      "feature2": { "step": "Notified", "title": "Email notifications", "description": "Opt in once and get emailed automatically at every status change." },
+      "feature3": { "step": "In transit", "title": "Nationwide coverage", "description": "From dispatch hub to final delivery, wherever you are." },
+      "feature4": { "step": "Delivered", "title": "Reliable delivery", "description": "Every shipment is logged and tracked from the moment it's received." }
+    }
+  },
+  "trustMarquee": {
+    "trustedBy": "Trusted by teams at"
+  },
+  "testimonials": {
+    "eyebrow": "Feedback",
+    "title": "What people say once it arrives.",
+    "ref": "REF · {number}",
+    "starRatingLabel": "5 out of 5 stars"
+  },
+  "servicesTeaser": {
+    "eyebrow": "Directory",
+    "title": "What we move, and how.",
+    "seeAll": "See all services"
+  },
+  "siteHeader": {
+    "trackShipment": "Track shipment",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "siteFooter": {
+    "tagline": "Real-time shipment tracking, from dispatch to your door.",
+    "navigate": "Navigate",
+    "contact": "Contact",
+    "copyright": "© {year} {siteName}. All rights reserved."
+  },
+  "nav": {
+    "home": "Home",
+    "track": "Track",
+    "services": "Services",
+    "about": "About",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "services": {
+    "standardDelivery": {
+      "title": "Standard Delivery",
+      "description": "Reliable door-to-door delivery at everyday rates.",
+      "features": ["3–5 business day delivery", "Real-time tracking included", "Signature on delivery available"]
+    },
+    "expressDelivery": {
+      "title": "Express Delivery",
+      "description": "Faster turnaround for time-sensitive shipments.",
+      "features": ["Next-day delivery in most regions", "Priority handling at every hub", "SMS and email status alerts"]
+    },
+    "internationalShipping": {
+      "title": "International Shipping",
+      "description": "Cross-border delivery with full tracking end to end.",
+      "features": ["Customs documentation handled for you", "Delivery to 150+ countries", "End-to-end tracking across borders"]
+    },
+    "freightBulk": {
+      "title": "Freight & Bulk",
+      "description": "Palletized and bulk freight for large-volume shipments.",
+      "features": ["Full and partial truckload options", "Dedicated freight coordinator", "Volume-based pricing"]
+    },
+    "warehousingStorage": {
+      "title": "Warehousing & Storage",
+      "description": "Short and long-term storage with on-demand fulfillment.",
+      "features": ["Climate-controlled facilities", "Pick, pack, and ship on request", "Live inventory visibility"]
+    },
+    "shipmentInsurance": {
+      "title": "Shipment Insurance",
+      "description": "Added protection and coverage for high-value shipments.",
+      "features": ["Coverage up to full declared value", "Fast claims processing", "No paperwork at drop-off"]
+    }
+  },
+  "faqs": {
+    "tracking": { "question": "How do I track my shipment?", "answer": "Enter your tracking number on the homepage or the Track page to see its current status and full history." },
+    "trackingNotWorking": { "question": "My tracking number isn't working. What do I do?", "answer": "Double-check the number for typos. If it still doesn't work, reach out through the Contact page and we'll look into it." },
+    "international": { "question": "Do you ship internationally?", "answer": "Yes, international shipping is available — see the Services page for details." },
+    "emailUpdates": { "question": "How do I get email updates about my shipment?", "answer": "Once you look up your tracking number, you'll see an option to enter your email and get notified at every status change." },
+    "deliveryTime": { "question": "How long does delivery take?", "answer": "Delivery times vary by service and destination. Check the estimated delivery date shown on your tracking page." },
+    "exceptionStatus": { "question": "What if my package shows an exception status?", "answer": "An exception means there's an issue that needs attention (e.g. a customs hold or delay). Check the timeline on your tracking page for details, or contact us for help." }
+  },
+  "testimonialsData": {
+    "testimonial1": { "quote": "I had a customs hold on an international shipment and actually knew what was happening the whole time instead of guessing. That alone is worth it.", "role": "Small business owner" },
+    "testimonial2": { "quote": "We switched our warehouse's outbound deliveries here after one too many 'where's my package' calls from customers. Those calls basically stopped.", "role": "Operations lead, Bennett & Sons Logistics" },
+    "testimonial3": { "quote": "Express delivery actually meant express. My package showed up a day earlier than the estimate, and I got an email the moment it left the hub.", "role": "Frequent shipper" }
+  },
+  "faqTeaser": {
+    "eyebrow": "Answers",
+    "title": "Frequently asked questions",
+    "seeAll": "See all questions"
+  },
+  "aboutPage": {
+    "banner": {
+      "title": "About World Cargo Express",
+      "subtitle": "Connecting the world through innovative logistics and unwavering reliability since 1998."
+    },
+    "story": {
+      "eyebrow": "Our story",
+      "title": "Built by people who move things for a living",
+      "imageAlt": "Our team at work",
+      "paragraphs": [
+        "Founded in 1998 with a single delivery van and a vision to simplify local shipping, World Cargo Express has been at the forefront of global logistics since 1998.",
+        "We recognized early on that technology would revolutionize logistics. By investing heavily in tracking infrastructure and automated sorting facilities, we set new standards for transparency and speed.",
+        "Today, we operate a massive fleet of vehicles and aircraft, serving millions of customers across 150+ countries. Yet, our core mission remains unchanged: to deliver your promises, on time, every time."
+      ]
+    },
+    "metrics": {
+      "countries": "Countries Served",
+      "employees": "Global Employees",
+      "dailyDeliveries": "Daily Deliveries",
+      "yearsExperience": "Years Experience"
+    },
+    "team": {
+      "eyebrow": "Team",
+      "title": "Meet the team",
+      "roles": {
+        "ceo": "Chief Executive Officer",
+        "coo": "Chief Operating Officer",
+        "vpLogistics": "VP, Logistics"
+      }
+    },
+    "values": {
+      "reliability": { "title": "Reliability", "description": "Every shipment tracked and accounted for, start to finish." },
+      "transparency": { "title": "Transparency", "description": "You always know exactly where things stand — no guesswork." },
+      "speed": { "title": "Speed", "description": "Fast, dependable delivery, every time." }
+    }
+  },
+  "contactForm": {
+    "thanks": "Thanks, {name} — we'll get back to you soon.",
+    "thanksFallbackName": "there",
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "messageLabel": "Message",
+    "genericError": "Something went wrong sending your message.",
+    "sending": "Sending...",
+    "send": "Send message"
+  },
+  "contactSection": {
+    "eyebrow": "Contact",
+    "title": "Still have questions?",
+    "description": "Send us a message and we'll get back to you directly."
+  },
+  "contactPage": {
+    "eyebrow": "Contact",
+    "title": "Contact us",
+    "subtitle": "Questions about a shipment or anything else — send us a message.",
+    "customerService": "Customer Service",
+    "availability": "Available 24/7",
+    "emailSupport": "Email Support",
+    "replyTime": "We reply within 2 hours",
+    "headquarters": "Global Headquarters"
+  },
+  "faqPage": {
+    "eyebrow": "Answers",
+    "title": "Frequently asked questions"
+  },
+  "servicesPage": {
+    "eyebrow": "Directory",
+    "title": "Services",
+    "description": "What we offer, from everyday deliveries to international shipping."
+  }
+}

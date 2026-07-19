@@ -1,15 +1,15 @@
 export interface NavLink {
-  label: string;
+  key: "home" | "track" | "services" | "about" | "faq" | "contact";
   href: string;
 }
 
 export const NAV_LINKS: NavLink[] = [
-  { label: "Home", href: "/" },
-  { label: "Track", href: "/track" },
-  { label: "Services", href: "/services" },
-  { label: "About", href: "/about" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Contact", href: "/contact" },
+  { key: "home", href: "/" },
+  { key: "track", href: "/track" },
+  { key: "services", href: "/services" },
+  { key: "about", href: "/about" },
+  { key: "faq", href: "/faq" },
+  { key: "contact", href: "/contact" },
 ];
 
 export const SITE_NAME = "World Cargo";

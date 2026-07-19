@@ -1,11 +1,13 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { useTranslations } from "next-intl";
 import { CheckCircle } from "@phosphor-icons/react/dist/ssr";
 import { submitContactForm } from "../api/contact";
 import { ApiError } from "@/lib/api-client";
 
 export function ContactForm() {
+  const t = useTranslations("contactForm");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -22,9 +24,7 @@ export function ContactForm() {
       await submitContactForm({ name, email, message });
       setSubmitted(true);
     } catch (err) {
-      setError(
-        err instanceof ApiError ? err.message : "Something went wrong sending your message."
-      );
+      setError(err instanceof ApiError ? err.message : t("genericError"));
     } finally {
       setIsSubmitting(false);
     }
@@ -32,18 +32,10 @@ export function ContactForm() {
 
   if (submitted) {
     return (
-      <div
-        className="flex items-start gap-3 rounded-2xl border border-border bg-elevated p-6"
-        aria-live="polite"
-      >
-        <CheckCircle
-          size={22}
-          weight="fill"
-          className="mt-0.5 shrink-0 text-status-success"
-          aria-hidden="true"
-        />
+      <div className="flex items-start gap-3 rounded-2xl border border-border bg-elevated p-6" aria-live="polite">
+        <CheckCircle size={22} weight="fill" className="mt-0.5 shrink-0 text-status-success" aria-hidden="true" />
         <p className="text-base leading-relaxed text-foreground">
-          Thanks, {name || "there"} — we&apos;ll get back to you soon.
+          {t("thanks", { name: name || t("thanksFallbackName") })}
         </p>
       </div>
     );
@@ -53,7 +45,7 @@ export function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-5">
       <div>
         <label htmlFor="contact-name" className="mb-1.5 block text-sm font-medium text-foreground">
-          Name
+          {t("nameLabel")}
         </label>
         <input
           id="contact-name"
@@ -65,7 +57,7 @@ export function ContactForm() {
       </div>
       <div>
         <label htmlFor="contact-email" className="mb-1.5 block text-sm font-medium text-foreground">
-          Email
+          {t("emailLabel")}
         </label>
         <input
           id="contact-email"
@@ -78,7 +70,7 @@ export function ContactForm() {
       </div>
       <div>
         <label htmlFor="contact-message" className="mb-1.5 block text-sm font-medium text-foreground">
-          Message
+          {t("messageLabel")}
         </label>
         <textarea
           id="contact-message"
@@ -97,7 +89,7 @@ export function ContactForm() {
         disabled={isSubmitting}
         className="rounded-lg bg-electric px-6 py-3 text-base font-medium text-white transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-electric disabled:opacity-50"
       >
-        {isSubmitting ? "Sending..." : "Send message"}
+        {isSubmitting ? t("sending") : t("send")}
       </button>
     </form>
   );
