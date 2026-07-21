@@ -1,0 +1,246 @@
+{
+  "hero": {
+    "eyebrow": "Śledź przesyłkę",
+    "title": "Wysyłaj wszędzie. Śledź wszystko.",
+    "description": "Infrastruktura logistyczna klasy korporacyjnej, której zaufało ponad 10 000 firm na całym świecie w zakresie bezpiecznych, szybkich i niezawodnych rozwiązań dostawy. Widoczność w czasie rzeczywistym od odbioru do dostawy.",
+    "liveTracking": "Śledzenie na żywo, bez konta",
+    "form": {
+      "trackingNumberLabel": "Numer śledzenia",
+      "placeholder": "Wpisz numer śledzenia",
+      "submit": "Śledź przesyłkę",
+      "tabs": {
+        "track": "Śledź",
+        "ship": "Wyślij",
+        "quote": "Wycena"
+      }
+    }
+  },
+  "howItWorks": {
+    "eyebrow": "Proces",
+    "title": "Trzy kroki. Bez konta.",
+    "steps": {
+      "step1": { "title": "Wpisz swój numer", "description": "Wpisz numer śledzenia w polu wyszukiwania." },
+      "step2": { "title": "Zobacz status na żywo", "description": "Sprawdź aktualny status, trasę i pełną historię zdarzeń." },
+      "step3": { "title": "Otrzymuj powiadomienia", "description": "Włącz powiadomienia e-mail, aby nie musieć sprawdzać ręcznie." }
+    },
+    "mockup": {
+      "inTransit": "W drodze",
+      "progress": "{current} z {total}",
+      "emailMeUpdates": "Powiadamiaj mnie e-mailem"
+    }
+  },
+  "featureHighlights": {
+    "eyebrow": "Manifest",
+    "title": "Każda przesyłka ma swoją trasę.\nTak samo jak każdy powód, by jej zaufać.",
+    "subtitle": "Cztery punkty kontrolne na drodze od „przyjęto” do „dostarczono”.",
+    "features": {
+      "feature1": { "step": "Przyjęto", "title": "Aktualizacje w czasie rzeczywistym", "description": "Zobacz status przesyłki w chwili, gdy się zmienia, a nie kilka godzin później." },
+      "feature2": { "step": "Powiadomiono", "title": "Powiadomienia e-mail", "description": "Włącz raz i otrzymuj automatyczny e-mail przy każdej zmianie statusu." },
+      "feature3": { "step": "W drodze", "title": "Zasięg ogólnokrajowy", "description": "Od centrum nadawczego do ostatecznej dostawy, gdziekolwiek jesteś." },
+      "feature4": { "step": "Dostarczono", "title": "Niezawodna dostawa", "description": "Każda przesyłka jest rejestrowana i śledzona od momentu przyjęcia." }
+    }
+  },
+  "trustMarquee": {
+    "trustedBy": "Zaufali nam"
+  },
+  "testimonials": {
+    "eyebrow": "Opinie",
+    "title": "Co mówią klienci po dostarczeniu.",
+    "ref": "REF · {number}",
+    "starRatingLabel": "5 na 5 gwiazdek"
+  },
+  "servicesTeaser": {
+    "eyebrow": "Katalog",
+    "title": "Co przewozimy i w jaki sposób.",
+    "seeAll": "Zobacz wszystkie usługi"
+  },
+  "siteHeader": {
+    "trackShipment": "Śledź przesyłkę",
+    "openMenu": "Otwórz menu",
+    "closeMenu": "Zamknij menu"
+  },
+  "siteFooter": {
+    "tagline": "Śledzenie przesyłek w czasie rzeczywistym, od nadania do drzwi.",
+    "navigate": "Nawigacja",
+    "contact": "Kontakt",
+    "copyright": "© {year} {siteName}. Wszelkie prawa zastrzeżone."
+  },
+  "nav": {
+    "home": "Start",
+    "track": "Śledź",
+    "services": "Usługi",
+    "about": "O nas",
+    "faq": "FAQ",
+    "contact": "Kontakt"
+  },
+  "services": {
+    "standardDelivery": {
+      "title": "Dostawa Standardowa",
+      "description": "Niezawodna dostawa od drzwi do drzwi w codziennych cenach.",
+      "features": ["Dostawa w 3–5 dni roboczych", "Śledzenie w czasie rzeczywistym w cenie", "Możliwość podpisu przy odbiorze"]
+    },
+    "expressDelivery": {
+      "title": "Dostawa Ekspresowa",
+      "description": "Szybsza realizacja dla pilnych przesyłek.",
+      "features": ["Dostawa następnego dnia w większości regionów", "Priorytetowa obsługa w każdym centrum", "Powiadomienia SMS i e-mail o statusie"]
+    },
+    "internationalShipping": {
+      "title": "Wysyłka Międzynarodowa",
+      "description": "Dostawa transgraniczna z pełnym śledzeniem od początku do końca.",
+      "features": ["Obsługa dokumentacji celnej w Twoim imieniu", "Dostawa do ponad 150 krajów", "Pełne śledzenie ponad granicami"]
+    },
+    "freightBulk": {
+      "title": "Transport i Towar Masowy",
+      "description": "Transport paletowy i masowy dla przesyłek o dużej objętości.",
+      "features": ["Opcje pełnego i częściowego załadunku", "Dedykowany koordynator transportu", "Ceny zależne od objętości"]
+    },
+    "warehousingStorage": {
+      "title": "Magazynowanie",
+      "description": "Magazynowanie krótko- i długoterminowe z realizacją na żądanie.",
+      "features": ["Obiekty z kontrolą klimatu", "Kompletacja, pakowanie i wysyłka na życzenie", "Podgląd stanu magazynowego na żywo"]
+    },
+    "shipmentInsurance": {
+      "title": "Ubezpieczenie Przesyłki",
+      "description": "Dodatkowa ochrona i pokrycie dla przesyłek o wysokiej wartości.",
+      "features": ["Pokrycie do pełnej zadeklarowanej wartości", "Szybkie rozpatrywanie roszczeń", "Bez formalności przy nadaniu"]
+    }
+  },
+  "faqs": {
+    "tracking": { "question": "Jak śledzić moją przesyłkę?", "answer": "Wpisz numer śledzenia na stronie głównej lub stronie Śledź, aby zobaczyć aktualny status i pełną historię." },
+    "trackingNotWorking": { "question": "Mój numer śledzenia nie działa. Co robić?", "answer": "Sprawdź numer pod kątem literówek. Jeśli nadal nie działa, skontaktuj się z nami przez stronę Kontakt, a sprawdzimy sprawę." },
+    "international": { "question": "Czy realizujecie wysyłki międzynarodowe?", "answer": "Tak, wysyłka międzynarodowa jest dostępna — szczegóły znajdziesz na stronie Usługi." },
+    "emailUpdates": { "question": "Jak otrzymywać powiadomienia e-mail o mojej przesyłce?", "answer": "Po wyszukaniu numeru śledzenia zobaczysz opcję podania adresu e-mail, aby otrzymywać powiadomienia przy każdej zmianie statusu." },
+    "deliveryTime": { "question": "Ile trwa dostawa?", "answer": "Czas dostawy zależy od usługi i miejsca docelowego. Sprawdź szacowaną datę dostawy na stronie śledzenia." },
+    "exceptionStatus": { "question": "Co jeśli moja przesyłka ma status wyjątku?", "answer": "Wyjątek oznacza problem wymagający uwagi (np. wstrzymanie celne lub opóźnienie). Sprawdź szczegóły w historii na stronie śledzenia lub skontaktuj się z nami po pomoc." }
+  },
+  "testimonialsData": {
+    "testimonial1": { "quote": "Moja międzynarodowa przesyłka miała wstrzymanie celne, a mimo to przez cały czas dokładnie wiedziałem, co się dzieje, zamiast zgadywać. Samo to jest warte tego rozwiązania.", "role": "Właścicielka małej firmy" },
+    "testimonial2": { "quote": "Przenieśliśmy tu wysyłki z naszego magazynu po zbyt wielu telefonach od klientów pytających „gdzie jest moja paczka”. Te telefony praktycznie ustały.", "role": "Kierownik operacyjny, Bennett & Sons Logistics" },
+    "testimonial3": { "quote": "Dostawa ekspresowa naprawdę była ekspresowa. Paczka dotarła dzień wcześniej niż szacowano, a e-mail dostałem w momencie, gdy opuściła centrum nadawcze.", "role": "Częsty nadawca" }
+  },
+  "faqTeaser": {
+    "eyebrow": "Odpowiedzi",
+    "title": "Najczęściej zadawane pytania",
+    "seeAll": "Zobacz wszystkie pytania"
+  },
+  "aboutPage": {
+    "banner": {
+      "title": "O World Cargo Express",
+      "subtitle": "Łączymy świat dzięki innowacyjnej logistyce i niezachwianej niezawodności od 1998 roku."
+    },
+    "story": {
+      "eyebrow": "Nasza historia",
+      "title": "Zbudowana przez ludzi, dla których przewożenie rzeczy to zawód",
+      "imageAlt": "Nasz zespół przy pracy",
+      "paragraphs": [
+        "Założona w 1998 roku z jednym samochodem dostawczym i wizją uproszczenia lokalnej wysyłki, World Cargo Express od tego czasu znajduje się w czołówce globalnej logistyki.",
+        "Wcześnie zrozumieliśmy, że technologia zrewolucjonizuje logistykę. Dzięki dużym inwestycjom w infrastrukturę śledzenia i zautomatyzowane centra sortowania ustanowiliśmy nowe standardy przejrzystości i szybkości.",
+        "Dziś prowadzimy ogromną flotę pojazdów i samolotów, obsługując miliony klientów w ponad 150 krajach. Nasza główna misja pozostaje jednak niezmienna: dotrzymywać obietnic, na czas, za każdym razem."
+      ]
+    },
+    "metrics": {
+      "countries": "Obsługiwane kraje",
+      "employees": "Pracownicy na całym świecie",
+      "dailyDeliveries": "Dostawy dziennie",
+      "yearsExperience": "Lata doświadczenia"
+    },
+    "team": {
+      "eyebrow": "Zespół",
+      "title": "Poznaj nasz zespół",
+      "roles": {
+        "ceo": "Dyrektor Generalny",
+        "coo": "Dyrektor Operacyjny",
+        "vpLogistics": "Wiceprezes ds. Logistyki"
+      }
+    },
+    "values": {
+      "reliability": { "title": "Niezawodność", "description": "Każda przesyłka jest śledzona i rozliczana, od początku do końca." },
+      "transparency": { "title": "Przejrzystość", "description": "Zawsze wiesz dokładnie, jak sprawy stoją — bez zgadywania." },
+      "speed": { "title": "Szybkość", "description": "Szybka, niezawodna dostawa, za każdym razem." }
+    }
+  },
+  "contactForm": {
+    "thanks": "Dziękujemy, {name} — wkrótce się z Tobą skontaktujemy.",
+    "thanksFallbackName": "tam",
+    "nameLabel": "Imię",
+    "emailLabel": "E-mail",
+    "messageLabel": "Wiadomość",
+    "genericError": "Coś poszło nie tak podczas wysyłania wiadomości.",
+    "sending": "Wysyłanie...",
+    "send": "Wyślij wiadomość"
+  },
+  "contactSection": {
+    "eyebrow": "Kontakt",
+    "title": "Masz jeszcze pytania?",
+    "description": "Wyślij nam wiadomość, a odpowiemy bezpośrednio."
+  },
+  "contactPage": {
+    "eyebrow": "Kontakt",
+    "title": "Skontaktuj się z nami",
+    "subtitle": "Pytania dotyczące przesyłki lub czegokolwiek innego — wyślij nam wiadomość.",
+    "customerService": "Obsługa klienta",
+    "availability": "Dostępność 24/7",
+    "emailSupport": "Wsparcie e-mail",
+    "replyTime": "Odpowiadamy w ciągu 2 godzin",
+    "headquarters": "Siedziba główna"
+  },
+  "faqPage": {
+    "eyebrow": "Odpowiedzi",
+    "title": "Najczęściej zadawane pytania"
+  },
+  "servicesPage": {
+    "eyebrow": "Katalog",
+    "title": "Usługi",
+    "description": "To, co oferujemy, od codziennych dostaw po wysyłki międzynarodowe."
+  },
+  "notFoundState": {
+    "title": "Nie mogliśmy znaleźć przesyłki o tym numerze śledzenia.",
+    "description": "Sprawdź jeszcze raz <trackingNumber></trackingNumber> i spróbuj ponownie."
+  },
+  "shipmentSummaryCard": {
+    "trackingNumber": "Numer śledzenia",
+    "from": "Od",
+    "to": "Do",
+    "estimatedDelivery": "Szacowana dostawa"
+  },
+  "shipmentTimeline": {
+    "noUpdates": "Brak zarejestrowanych aktualizacji."
+  },
+  "statusProgressBar": {
+    "exceptionMessage": "Wystąpił problem z tą przesyłką. Sprawdź historię poniżej, aby uzyskać szczegóły.",
+    "progressAriaLabel": "Postęp przesyłki",
+    "current": "aktualny",
+    "completed": "zakończony"
+  },
+  "subscribeForm": {
+    "prompt": "Otrzymuj e-mail przy każdej aktualizacji tej przesyłki.",
+    "emailLabel": "Adres e-mail",
+    "subscribing": "Zapisywanie...",
+    "subscribe": "Zapisz się",
+    "subscribed": "Zapisano Cię na aktualizacje tej przesyłki.",
+    "genericError": "Coś poszło nie tak. Spróbuj ponownie."
+  },
+  "shipmentStatus": {
+    "received": "Przyjęto",
+    "in_warehouse": "W magazynie",
+    "dispatched": "Wysłano",
+    "in_transit": "W drodze",
+    "arrived": "Dotarło",
+    "delivered": "Dostarczono",
+    "exception": "Wyjątek"
+  },
+  "trackingPage": {
+    "eyebrow": "Śledź",
+    "title": "Śledź swoją przesyłkę",
+    "subtitle": "Wpisz numer śledzenia, aby zobaczyć najnowszy status.",
+    "trackingLabel": "Śledzenie <trackingNumber></trackingNumber>",
+    "lookingUp": "Wyszukiwanie przesyłki…",
+    "genericError": "Coś poszło nie tak podczas wyszukiwania. Spróbuj ponownie."
+  },
+  "trackingForm": {
+    "label": "Numer śledzenia",
+    "placeholder": "Wpisz numer śledzenia",
+    "submit": "Śledź przesyłkę",
+    "tracking": "Śledzenie..."
+  }
+}
