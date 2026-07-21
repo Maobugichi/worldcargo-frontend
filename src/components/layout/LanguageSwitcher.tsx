@@ -11,6 +11,7 @@ const LOCALE_META: Record<Locale, { label: string; flag: string }> = {
   es: { label: 'Español', flag: '🇪🇸' },
   ja: { label: '日本語', flag: '🇯🇵' },
   de: { label: 'Deutsch', flag: '🇩🇪' },
+  pl: { label: 'Polski', flag: '🇵🇱' },
 };
 
 export function LanguageSwitcher() {

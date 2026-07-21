@@ -57,7 +57,7 @@ export function HeroTrackerForm() {
         })}
       </div>
 
-      <div className="rounded-2xl rounded-tl-none border border-border-strong bg-surface p-3 transition-colors focus-within:border-accent focus-within:ring-2 focus-within:ring-accent/30">
+      <div className="rounded-2xl rounded-t-none border border-border-strong bg-surface p-3 transition-colors focus-within:border-accent focus-within:ring-2 focus-within:ring-accent/30">
         <form
           onSubmit={handleSubmit}
           className="flex w-full flex-col items-stretch gap-2 sm:flex-row sm:items-center"
