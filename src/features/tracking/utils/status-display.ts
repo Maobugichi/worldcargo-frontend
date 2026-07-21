@@ -1,4 +1,5 @@
 import { ShipmentStatus, SHIPMENT_STATUSES } from "../types/tracking.types";
+import type { useTranslations } from "next-intl";
 
 export function getProgressStepIndex(status: ShipmentStatus): number {
   return SHIPMENT_STATUSES.indexOf(status as (typeof SHIPMENT_STATUSES)[number]);
@@ -8,18 +9,10 @@ export function isException(status: ShipmentStatus): boolean {
   return status === "exception";
 }
 
-const STATUS_LABELS: Record<ShipmentStatus, string> = {
-  received: "Received",
-  in_warehouse: "In Warehouse",
-  dispatched: "Dispatched",
-  in_transit: "In Transit",
-  arrived: "Arrived",
-  delivered: "Delivered",
-  exception: "Exception",
-};
+type StatusTranslator = ReturnType<typeof useTranslations>;
 
-export function getStatusLabel(status: ShipmentStatus): string {
-  return STATUS_LABELS[status];
+export function getStatusLabel(t: StatusTranslator, status: ShipmentStatus): string {
+  return t(status);
 }
 
 export type StatusPillTone = "neutral" | "progress" | "success" | "exception";

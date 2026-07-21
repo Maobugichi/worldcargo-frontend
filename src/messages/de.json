@@ -1,0 +1,246 @@
+{
+  "hero": {
+    "eyebrow": "Sendung verfolgen",
+    "title": "Überallhin versenden. Alles verfolgen.",
+    "description": "Logistikinfrastruktur auf Unternehmensniveau, der weltweit über 10.000 Unternehmen vertrauen – für sichere, schnelle und zuverlässige Zustellung. Echtzeit-Transparenz von der Abholung bis zur Zustellung.",
+    "liveTracking": "Live-Sendungsverfolgung, kein Konto erforderlich",
+    "form": {
+      "trackingNumberLabel": "Sendungsnummer",
+      "placeholder": "Sendungsnummer eingeben",
+      "submit": "Sendung verfolgen",
+      "tabs": {
+        "track": "Verfolgen",
+        "ship": "Versenden",
+        "quote": "Angebot"
+      }
+    }
+  },
+  "howItWorks": {
+    "eyebrow": "Ablauf",
+    "title": "Drei Schritte. Kein Konto erforderlich.",
+    "steps": {
+      "step1": { "title": "Nummer eingeben", "description": "Gib deine Sendungsnummer in das Suchfeld ein." },
+      "step2": { "title": "Live-Status ansehen", "description": "Sieh dir den aktuellen Status, die Route und den vollständigen Verlauf an." },
+      "step3": { "title": "Benachrichtigung erhalten", "description": "Aktiviere E-Mail-Updates, damit du nicht manuell nachsehen musst." }
+    },
+    "mockup": {
+      "inTransit": "Unterwegs",
+      "progress": "{current} von {total}",
+      "emailMeUpdates": "Per E-Mail benachrichtigen"
+    }
+  },
+  "featureHighlights": {
+    "eyebrow": "Manifest",
+    "title": "Jede Sendung folgt einer Route.\nGenauso jeder Grund, ihr zu vertrauen.",
+    "subtitle": "Vier Kontrollpunkte auf dem Weg von \u201eeingegangen\u201c zu \u201ezugestellt\u201c.",
+    "features": {
+      "feature1": { "step": "Eingegangen", "title": "Echtzeit-Updates", "description": "Sieh den Status deiner Sendung in dem Moment, in dem er sich ändert – nicht erst Stunden später." },
+      "feature2": { "step": "Benachrichtigt", "title": "E-Mail-Benachrichtigungen", "description": "Einmal aktivieren und bei jeder Statusänderung automatisch eine E-Mail erhalten." },
+      "feature3": { "step": "Unterwegs", "title": "Landesweite Abdeckung", "description": "Vom Verteilzentrum bis zur endgültigen Zustellung, ganz gleich wo du bist." },
+      "feature4": { "step": "Zugestellt", "title": "Zuverlässige Zustellung", "description": "Jede Sendung wird ab dem Moment des Eingangs erfasst und verfolgt." }
+    }
+  },
+  "trustMarquee": {
+    "trustedBy": "Vertraut von Teams bei"
+  },
+  "testimonials": {
+    "eyebrow": "Feedback",
+    "title": "Was Kunden sagen, sobald es ankommt.",
+    "ref": "REF · {number}",
+    "starRatingLabel": "5 von 5 Sternen"
+  },
+  "servicesTeaser": {
+    "eyebrow": "Verzeichnis",
+    "title": "Was wir transportieren, und wie.",
+    "seeAll": "Alle Leistungen ansehen"
+  },
+  "siteHeader": {
+    "trackShipment": "Sendung verfolgen",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen"
+  },
+  "siteFooter": {
+    "tagline": "Echtzeit-Sendungsverfolgung, vom Versand bis zur Haustür.",
+    "navigate": "Navigation",
+    "contact": "Kontakt",
+    "copyright": "© {year} {siteName}. Alle Rechte vorbehalten."
+  },
+  "nav": {
+    "home": "Start",
+    "track": "Verfolgen",
+    "services": "Leistungen",
+    "about": "Über uns",
+    "faq": "FAQ",
+    "contact": "Kontakt"
+  },
+  "services": {
+    "standardDelivery": {
+      "title": "Standardversand",
+      "description": "Zuverlässige Haustürzustellung zu Alltagspreisen.",
+      "features": ["Zustellung in 3–5 Werktagen", "Echtzeit-Sendungsverfolgung inklusive", "Unterschrift bei Zustellung möglich"]
+    },
+    "expressDelivery": {
+      "title": "Expressversand",
+      "description": "Schnellere Zustellung für zeitkritische Sendungen.",
+      "features": ["Zustellung am nächsten Tag in den meisten Regionen", "Prioritäre Bearbeitung an jedem Umschlagpunkt", "SMS- und E-Mail-Statusbenachrichtigungen"]
+    },
+    "internationalShipping": {
+      "title": "Internationaler Versand",
+      "description": "Grenzüberschreitende Zustellung mit lückenloser Sendungsverfolgung.",
+      "features": ["Zollabwicklung wird für dich übernommen", "Zustellung in über 150 Länder", "Lückenlose Sendungsverfolgung über Grenzen hinweg"]
+    },
+    "freightBulk": {
+      "title": "Fracht & Großmengen",
+      "description": "Palettierte und lose Fracht für Sendungen mit großem Volumen.",
+      "features": ["Komplett- und Teilladungen möglich", "Fester Ansprechpartner für Frachtkoordination", "Volumenabhängige Preisgestaltung"]
+    },
+    "warehousingStorage": {
+      "title": "Lagerung",
+      "description": "Kurz- und langfristige Lagerung mit Versand auf Abruf.",
+      "features": ["Klimatisierte Lagereinrichtungen", "Kommissionierung, Verpackung und Versand auf Anfrage", "Live-Bestandsübersicht"]
+    },
+    "shipmentInsurance": {
+      "title": "Sendungsversicherung",
+      "description": "Zusätzlicher Schutz und Absicherung für hochwertige Sendungen.",
+      "features": ["Absicherung bis zum vollen deklarierten Wert", "Schnelle Schadensabwicklung", "Kein Papierkram bei der Abgabe"]
+    }
+  },
+  "faqs": {
+    "tracking": { "question": "Wie verfolge ich meine Sendung?", "answer": "Gib deine Sendungsnummer auf der Startseite oder der Verfolgen-Seite ein, um den aktuellen Status und den vollständigen Verlauf zu sehen." },
+    "trackingNotWorking": { "question": "Meine Sendungsnummer funktioniert nicht. Was soll ich tun?", "answer": "Überprüfe die Nummer auf Tippfehler. Falls es weiterhin nicht funktioniert, wende dich über die Kontaktseite an uns – wir kümmern uns darum." },
+    "international": { "question": "Versendet ihr international?", "answer": "Ja, internationaler Versand ist verfügbar — Details findest du auf der Leistungen-Seite." },
+    "emailUpdates": { "question": "Wie erhalte ich E-Mail-Updates zu meiner Sendung?", "answer": "Sobald du deine Sendungsnummer nachschlägst, kannst du deine E-Mail-Adresse eingeben und wirst bei jeder Statusänderung benachrichtigt." },
+    "deliveryTime": { "question": "Wie lange dauert die Zustellung?", "answer": "Die Zustellzeiten variieren je nach Leistung und Zielort. Das voraussichtliche Zustelldatum findest du auf deiner Sendungsverfolgungsseite." },
+    "exceptionStatus": { "question": "Was, wenn meine Sendung den Status \u201eAusnahme\u201c zeigt?", "answer": "Eine Ausnahme bedeutet, dass ein Problem vorliegt, das Aufmerksamkeit erfordert (z. B. eine Zollprüfung oder eine Verzögerung). Details findest du im Verlauf auf deiner Sendungsverfolgungsseite, oder kontaktiere uns für Unterstützung." }
+  },
+  "testimonialsData": {
+    "testimonial1": { "quote": "Bei einer internationalen Sendung gab es eine Zollprüfung, und ich wusste die ganze Zeit über genau, was los war, statt nur zu raten. Allein dafür lohnt es sich schon.", "role": "Kleinunternehmerin" },
+    "testimonial2": { "quote": "Wir haben den Warenausgang unseres Lagers hierher verlagert, nachdem es zu viele Anrufe von Kunden gab, die fragten, wo ihr Paket bleibt. Diese Anrufe sind praktisch verschwunden.", "role": "Operations Lead, Bennett & Sons Logistics" },
+    "testimonial3": { "quote": "Expressversand war wirklich express. Mein Paket kam einen Tag früher als geschätzt an, und ich erhielt eine E-Mail, sobald es das Verteilzentrum verlassen hatte.", "role": "Vielversender" }
+  },
+  "faqTeaser": {
+    "eyebrow": "Antworten",
+    "title": "Häufig gestellte Fragen",
+    "seeAll": "Alle Fragen ansehen"
+  },
+  "aboutPage": {
+    "banner": {
+      "title": "Über World Cargo Express",
+      "subtitle": "Wir verbinden die Welt durch innovative Logistik und unerschütterliche Zuverlässigkeit seit 1998."
+    },
+    "story": {
+      "eyebrow": "Unsere Geschichte",
+      "title": "Aufgebaut von Menschen, die beruflich Dinge bewegen",
+      "imageAlt": "Unser Team bei der Arbeit",
+      "paragraphs": [
+        "1998 mit einem einzigen Lieferwagen und der Vision gegründet, den lokalen Versand zu vereinfachen, steht World Cargo Express seither an der Spitze der globalen Logistik.",
+        "Wir haben früh erkannt, dass Technologie die Logistik revolutionieren würde. Durch hohe Investitionen in Sendungsverfolgungs-Infrastruktur und automatisierte Sortieranlagen setzten wir neue Maßstäbe für Transparenz und Geschwindigkeit.",
+        "Heute betreiben wir eine riesige Flotte aus Fahrzeugen und Flugzeugen und bedienen Millionen von Kunden in über 150 Ländern. Unsere Kernmission bleibt jedoch unverändert: deine Zusagen einzuhalten, pünktlich, jedes Mal."
+      ]
+    },
+    "metrics": {
+      "countries": "Bediente Länder",
+      "employees": "Mitarbeiter weltweit",
+      "dailyDeliveries": "Zustellungen pro Tag",
+      "yearsExperience": "Jahre Erfahrung"
+    },
+    "team": {
+      "eyebrow": "Team",
+      "title": "Unser Team",
+      "roles": {
+        "ceo": "Vorstandsvorsitzender",
+        "coo": "Operativer Geschäftsführer",
+        "vpLogistics": "VP, Logistik"
+      }
+    },
+    "values": {
+      "reliability": { "title": "Zuverlässigkeit", "description": "Jede Sendung wird von Anfang bis Ende verfolgt und erfasst." },
+      "transparency": { "title": "Transparenz", "description": "Du weißt immer genau, wo die Dinge stehen — kein Rätselraten." },
+      "speed": { "title": "Geschwindigkeit", "description": "Schnelle, zuverlässige Zustellung, jedes Mal." }
+    }
+  },
+  "contactForm": {
+    "thanks": "Danke, {name} — wir melden uns bald bei dir.",
+    "thanksFallbackName": "dort",
+    "nameLabel": "Name",
+    "emailLabel": "E-Mail",
+    "messageLabel": "Nachricht",
+    "genericError": "Beim Senden deiner Nachricht ist ein Fehler aufgetreten.",
+    "sending": "Wird gesendet...",
+    "send": "Nachricht senden"
+  },
+  "contactSection": {
+    "eyebrow": "Kontakt",
+    "title": "Noch Fragen?",
+    "description": "Schick uns eine Nachricht und wir melden uns direkt bei dir."
+  },
+  "contactPage": {
+    "eyebrow": "Kontakt",
+    "title": "Kontaktiere uns",
+    "subtitle": "Fragen zu einer Sendung oder etwas anderem — schick uns eine Nachricht.",
+    "customerService": "Kundenservice",
+    "availability": "Rund um die Uhr verfügbar",
+    "emailSupport": "E-Mail-Support",
+    "replyTime": "Wir antworten innerhalb von 2 Stunden",
+    "headquarters": "Globaler Hauptsitz"
+  },
+  "faqPage": {
+    "eyebrow": "Antworten",
+    "title": "Häufig gestellte Fragen"
+  },
+  "servicesPage": {
+    "eyebrow": "Verzeichnis",
+    "title": "Leistungen",
+    "description": "Was wir anbieten, von alltäglichen Zustellungen bis hin zu internationalem Versand."
+  },
+  "notFoundState": {
+  "title": "Wir konnten keine Sendung mit dieser Sendungsnummer finden.",
+  "description": "Überprüfe <trackingNumber></trackingNumber> und versuche es erneut."
+},
+"shipmentSummaryCard": {
+  "trackingNumber": "Sendungsnummer",
+  "from": "Von",
+  "to": "An",
+  "estimatedDelivery": "Voraussichtliche Zustellung"
+},
+"shipmentTimeline": {
+  "noUpdates": "Noch keine Updates vorhanden."
+},
+"statusProgressBar": {
+  "exceptionMessage": "Es gibt ein Problem mit dieser Sendung. Details findest du im Verlauf unten.",
+  "progressAriaLabel": "Sendungsverlauf",
+  "current": "aktuell",
+  "completed": "abgeschlossen"
+},
+"subscribeForm": {
+  "prompt": "Erhalte eine E-Mail, sobald sich diese Sendung aktualisiert.",
+  "emailLabel": "E-Mail-Adresse",
+  "subscribing": "Wird abonniert...",
+  "subscribe": "Abonnieren",
+  "subscribed": "Du hast Updates für diese Sendung abonniert.",
+  "genericError": "Etwas ist schiefgelaufen. Bitte versuche es erneut."
+},
+"shipmentStatus": {
+  "received": "Eingegangen",
+  "in_warehouse": "Im Lager",
+  "dispatched": "Versandt",
+  "in_transit": "Unterwegs",
+  "arrived": "Angekommen",
+  "delivered": "Zugestellt",
+  "exception": "Ausnahme"
+},
+"trackingPage": {
+  "eyebrow": "Verfolgen",
+  "title": "Verfolge deine Sendung",
+  "subtitle": "Gib deine Sendungsnummer ein, um den aktuellen Status zu sehen.",
+  "trackingLabel": "Verfolge <trackingNumber></trackingNumber>",
+  "lookingUp": "Sendung wird gesucht…",
+  "genericError": "Beim Suchen ist ein Fehler aufgetreten. Bitte versuche es erneut."
+},
+"trackingForm": {
+  "label": "Sendungsnummer",
+  "placeholder": "Sendungsnummer eingeben",
+  "submit": "Sendung verfolgen",
+  "tracking": "Wird verfolgt..."
+}
+}

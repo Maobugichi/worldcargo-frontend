@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
+import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
 import { WarningCircle } from "@phosphor-icons/react/dist/ssr";
 import { getShipmentByTrackingNumber } from "../api/get-shipments";
@@ -23,6 +24,7 @@ type LookupState =
   | { status: "error"; message: string };
 
 export function TrackingPage() {
+  const t = useTranslations("trackingPage");
   const searchParams = useSearchParams();
   const [lookup, setLookup] = useState<LookupState>({ status: "idle" });
 
@@ -37,10 +39,7 @@ export function TrackingPage() {
         setLookup({ status: "not-found", trackingNumber });
       }
     } catch {
-      setLookup({
-        status: "error",
-        message: "Something went wrong looking that up. Please try again.",
-      });
+      setLookup({ status: "error", message: t("genericError") });
     }
   }
 
@@ -60,19 +59,17 @@ export function TrackingPage() {
     <main className="mx-auto flex w-full max-w-4xl flex-1 flex-col items-center gap-8 px-4 py-16">
       {hasResult ? (
         <p className="text-sm font-medium text-foreground/50">
-          Tracking <span className="font-mono text-foreground">{lookup.shipment.trackingNumber}</span>
+          {t.rich("trackingLabel", {
+            trackingNumber: () => <span className="font-mono text-foreground">{lookup.shipment.trackingNumber}</span>,
+          })}
         </p>
       ) : (
         <div className="text-center">
-          <p className="text-sm font-medium uppercase tracking-[0.25em] text-postal-tint/80">
-            Track
-          </p>
+          <p className="text-sm font-medium uppercase tracking-[0.25em] text-postal-tint/80">{t("eyebrow")}</p>
           <h1 className="mt-3 font-display text-4xl font-medium leading-tight tracking-tight text-foreground sm:text-5xl">
-            Track your shipment
+            {t("title")}
           </h1>
-          <p className="mt-3 text-lg text-foreground/50">
-            Enter your tracking number to see the latest status.
-          </p>
+          <p className="mt-3 text-lg text-foreground/50">{t("subtitle")}</p>
         </div>
       )}
 
@@ -80,7 +77,7 @@ export function TrackingPage() {
 
       {lookup.status === "loading" && (
         <p className="text-sm text-foreground/50" aria-live="polite">
-          Looking up your shipment…
+          {t("lookingUp")}
         </p>
       )}
 
@@ -94,21 +91,11 @@ export function TrackingPage() {
         </div>
       )}
 
-      {lookup.status === "not-found" && (
-        <NotFoundState trackingNumber={lookup.trackingNumber} />
-      )}
+      {lookup.status === "not-found" && <NotFoundState trackingNumber={lookup.trackingNumber} />}
 
       {lookup.status === "error" && (
-        <div
-          className="flex w-full max-w-md items-start gap-3 rounded-2xl border border-status-exception/30 bg-status-exception/5 p-6"
-          aria-live="assertive"
-        >
-          <WarningCircle
-            size={22}
-            weight="fill"
-            className="mt-0.5 shrink-0 text-status-exception"
-            aria-hidden="true"
-          />
+        <div className="flex w-full max-w-md items-start gap-3 rounded-2xl border border-status-exception/30 bg-status-exception/5 p-6" aria-live="assertive">
+          <WarningCircle size={22} weight="fill" className="mt-0.5 shrink-0 text-status-exception" aria-hidden="true" />
           <p className="text-base leading-relaxed text-foreground">{lookup.message}</p>
         </div>
       )}

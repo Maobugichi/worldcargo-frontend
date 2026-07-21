@@ -192,5 +192,55 @@
     "eyebrow": "サービス一覧",
     "title": "サービス",
     "description": "日常の配送から国際配送まで、私たちが提供するサービス。"
-  }
+  },
+  "notFoundState": {
+  "title": "その追跡番号の荷物が見つかりませんでした。",
+  "description": "<trackingNumber></trackingNumber>を確認して、もう一度お試しください。"
+},
+"shipmentSummaryCard": {
+  "trackingNumber": "追跡番号",
+  "from": "発送元",
+  "to": "配送先",
+  "estimatedDelivery": "お届け予定日"
+},
+"shipmentTimeline": {
+  "noUpdates": "まだ更新情報がありません。"
+},
+"statusProgressBar": {
+  "exceptionMessage": "この荷物に問題が発生しています。詳細は下の履歴をご確認ください。",
+  "progressAriaLabel": "配送状況",
+  "current": "現在",
+  "completed": "完了"
+},
+"subscribeForm": {
+  "prompt": "この荷物が更新されるたびにメールを受け取れます。",
+  "emailLabel": "メールアドレス",
+  "subscribing": "登録中...",
+  "subscribe": "登録する",
+  "subscribed": "この荷物の更新情報を登録しました。",
+  "genericError": "エラーが発生しました。もう一度お試しください。"
+},
+"shipmentStatus": {
+  "received": "受付済み",
+  "in_warehouse": "倉庫保管中",
+  "dispatched": "発送済み",
+  "in_transit": "配送中",
+  "arrived": "到着",
+  "delivered": "配達完了",
+  "exception": "例外"
+},
+"trackingPage": {
+  "eyebrow": "追跡",
+  "title": "荷物を追跡",
+  "subtitle": "追跡番号を入力して最新の状況を確認してください。",
+  "trackingLabel": "<trackingNumber></trackingNumber>を追跡中",
+  "lookingUp": "荷物を検索しています…",
+  "genericError": "検索中にエラーが発生しました。もう一度お試しください。"
+},
+"trackingForm": {
+  "label": "追跡番号",
+  "placeholder": "追跡番号を入力してください",
+  "submit": "荷物を追跡",
+  "tracking": "追跡中..."
+}
 }

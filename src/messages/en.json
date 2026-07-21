@@ -192,5 +192,55 @@
     "eyebrow": "Directory",
     "title": "Services",
     "description": "What we offer, from everyday deliveries to international shipping."
-  }
+  },
+  "notFoundState": {
+  "title": "We couldn't find a shipment with that tracking number.",
+  "description": "Double-check <trackingNumber></trackingNumber> and try again."
+},
+"shipmentSummaryCard": {
+  "trackingNumber": "Tracking number",
+  "from": "From",
+  "to": "To",
+  "estimatedDelivery": "Estimated delivery"
+},
+"shipmentTimeline": {
+  "noUpdates": "No updates logged yet."
+},
+"statusProgressBar": {
+  "exceptionMessage": "There's an issue with this shipment. Check the timeline below for details.",
+  "progressAriaLabel": "Shipment progress",
+  "current": "current",
+  "completed": "completed"
+},
+"subscribeForm": {
+  "prompt": "Get an email whenever this shipment updates.",
+  "emailLabel": "Email address",
+  "subscribing": "Subscribing...",
+  "subscribe": "Subscribe",
+  "subscribed": "You're subscribed to updates for this shipment.",
+  "genericError": "Something went wrong. Please try again."
+},
+"shipmentStatus": {
+  "received": "Received",
+  "in_warehouse": "In Warehouse",
+  "dispatched": "Dispatched",
+  "in_transit": "In Transit",
+  "arrived": "Arrived",
+  "delivered": "Delivered",
+  "exception": "Exception"
+},
+"trackingPage": {
+  "eyebrow": "Track",
+  "title": "Track your shipment",
+  "subtitle": "Enter your tracking number to see the latest status.",
+  "trackingLabel": "Tracking <trackingNumber></trackingNumber>",
+  "lookingUp": "Looking up your shipment…",
+  "genericError": "Something went wrong looking that up. Please try again."
+},
+"trackingForm": {
+  "label": "Tracking number",
+  "placeholder": "Enter your tracking number",
+  "submit": "Track shipment",
+  "tracking": "Tracking..."
+}
 }

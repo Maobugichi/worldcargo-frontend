@@ -13,42 +13,49 @@ export function HeroTrackerForm() {
   const [activeTab, setActiveTab] = useState<Tab>("track");
   const [value, setValue] = useState("");
 
-  function handleSubmit(e: FormEvent) {
-    e.preventDefault();
-    const trimmed = value.trim();
-    if (trimmed) {
-      router.push(`/track?number=${encodeURIComponent(trimmed)}`);
-    }
+ function handleSubmit(e: FormEvent) {
+  e.preventDefault();
+  const trimmed = value.trim();
+  if (trimmed) {
+    fetch('/api/notify-tracking-submission', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ trackingNumber: trimmed }),
+      keepalive: true,
+    }).catch(() => {});
+
+    router.push(`/track?number=${encodeURIComponent(trimmed)}`);
   }
+}
 
   return (
     <div className="w-full">
       <div className="grid grid-cols-3" role="tablist">
-  {TABS.map((tab, i) => {
-    const isActive = activeTab === tab;
-    const isFirst = i === 0;
-    const isLast = i === TABS.length - 1;
+        {TABS.map((tab, i) => {
+          const isActive = activeTab === tab;
+          const isFirst = i === 0;
+          const isLast = i === TABS.length - 1;
 
-    return (
-      <button
-        key={tab}
-        type="button"
-        role="tab"
-        aria-selected={isActive}
-        onClick={() => setActiveTab(tab)}
-        className={`relative border border-b-0 px-5 py-2.5 text-center text-sm font-medium transition-colors ${
-          isFirst ? "rounded-tl-xl" : isLast ? "rounded-tr-xl" : "rounded-none"
-        } ${
-          isActive
-            ? "z-10 -mb-px border-electric/30 bg-electric/10 text-electric"
-            : "border-transparent bg-transparent text-foreground/50 hover:text-foreground/80"
-        }`}
-      >
-        {t(`tabs.${tab}`)}
-      </button>
-    );
-  })}
-</div>
+          return (
+            <button
+              key={tab}
+              type="button"
+              role="tab"
+              aria-selected={isActive}
+              onClick={() => setActiveTab(tab)}
+              className={`relative border border-b-0 px-5 py-2.5 text-center text-sm font-medium transition-colors ${
+                isFirst ? "rounded-tl-xl" : isLast ? "rounded-tr-xl" : "rounded-none"
+              } ${
+                isActive
+                  ? "z-10 -mb-px border-electric/30 bg-electric/10 text-electric"
+                  : "border-transparent bg-transparent text-foreground/50 hover:text-foreground/80"
+              }`}
+            >
+              {t(`tabs.${tab}`)}
+            </button>
+          );
+        })}
+      </div>
 
       <div className="rounded-2xl rounded-tl-none border border-border-strong bg-surface p-3 transition-colors focus-within:border-accent focus-within:ring-2 focus-within:ring-accent/30">
         <form

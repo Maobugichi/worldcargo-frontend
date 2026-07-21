@@ -192,5 +192,55 @@
     "eyebrow": "Directorio",
     "title": "Servicios",
     "description": "Lo que ofrecemos, desde entregas cotidianas hasta envíos internacionales."
-  }
+  },
+  "notFoundState": {
+  "title": "No pudimos encontrar un envío con ese número de seguimiento.",
+  "description": "Verifica <trackingNumber></trackingNumber> e intenta de nuevo."
+},
+"shipmentSummaryCard": {
+  "trackingNumber": "Número de seguimiento",
+  "from": "Desde",
+  "to": "Hasta",
+  "estimatedDelivery": "Entrega estimada"
+},
+"shipmentTimeline": {
+  "noUpdates": "Aún no hay actualizaciones registradas."
+},
+"statusProgressBar": {
+  "exceptionMessage": "Hay un problema con este envío. Consulta el historial a continuación para más detalles.",
+  "progressAriaLabel": "Progreso del envío",
+  "current": "actual",
+  "completed": "completado"
+},
+"subscribeForm": {
+  "prompt": "Recibe un correo cada vez que este envío se actualice.",
+  "emailLabel": "Correo electrónico",
+  "subscribing": "Suscribiendo...",
+  "subscribe": "Suscribirse",
+  "subscribed": "Te has suscrito a las actualizaciones de este envío.",
+  "genericError": "Algo salió mal. Inténtalo de nuevo."
+},
+"shipmentStatus": {
+  "received": "Recibido",
+  "in_warehouse": "En Almacén",
+  "dispatched": "Despachado",
+  "in_transit": "En Tránsito",
+  "arrived": "Llegó",
+  "delivered": "Entregado",
+  "exception": "Excepción"
+},
+"trackingPage": {
+  "eyebrow": "Rastrear",
+  "title": "Rastrea tu envío",
+  "subtitle": "Ingresa tu número de seguimiento para ver el estado más reciente.",
+  "trackingLabel": "Rastreando <trackingNumber></trackingNumber>",
+  "lookingUp": "Buscando tu envío…",
+  "genericError": "Algo salió mal al buscarlo. Inténtalo de nuevo."
+},
+"trackingForm": {
+  "label": "Número de seguimiento",
+  "placeholder": "Ingresa tu número de seguimiento",
+  "submit": "Rastrear envío",
+  "tracking": "Rastreando..."
+}
 }

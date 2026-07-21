@@ -1,11 +1,13 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { useTranslations } from "next-intl";
 import { CheckCircle } from "@phosphor-icons/react/dist/ssr";
 import { subscribeToUpdates } from "../api/subscribe";
 import { ApiError } from "@/lib/api-client";
 
 export function SubscribeForm({ trackingNumber }: { trackingNumber: string }) {
+  const t = useTranslations("subscribeForm");
   const [email, setEmail] = useState("");
   const [state, setState] = useState<"idle" | "submitting" | "done" | "error">("idle");
   const [error, setError] = useState<string | null>(null);
@@ -20,35 +22,25 @@ export function SubscribeForm({ trackingNumber }: { trackingNumber: string }) {
       setState("done");
     } catch (err) {
       setState("error");
-      setError(err instanceof ApiError ? err.message : "Something went wrong. Please try again.");
+      setError(err instanceof ApiError ? err.message : t("genericError"));
     }
   }
 
   if (state === "done") {
     return (
-      <div
-        className="flex w-full max-w-xl items-start gap-3 rounded-2xl border border-border bg-elevated p-6"
-        aria-live="polite"
-      >
-        <CheckCircle
-          size={22}
-          weight="fill"
-          className="mt-0.5 shrink-0 text-status-success"
-          aria-hidden="true"
-        />
-        <p className="text-base leading-relaxed text-foreground">
-          You&apos;re subscribed to updates for this shipment.
-        </p>
+      <div className="flex w-full max-w-xl items-start gap-3 rounded-2xl border border-border bg-elevated p-6" aria-live="polite">
+        <CheckCircle size={22} weight="fill" className="mt-0.5 shrink-0 text-status-success" aria-hidden="true" />
+        <p className="text-base leading-relaxed text-foreground">{t("subscribed")}</p>
       </div>
     );
   }
 
   return (
     <form onSubmit={handleSubmit} className="flex w-full max-w-xl flex-col items-center gap-2">
-      <p className="text-sm text-foreground/50">Get an email whenever this shipment updates.</p>
+      <p className="text-sm text-foreground/50">{t("prompt")}</p>
       <div className="flex w-full gap-2">
         <label htmlFor="subscribe-email" className="sr-only">
-          Email address
+          {t("emailLabel")}
         </label>
         <input
           id="subscribe-email"
@@ -66,7 +58,7 @@ export function SubscribeForm({ trackingNumber }: { trackingNumber: string }) {
           disabled={state === "submitting"}
           className="rounded-lg border border-border-strong px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-background disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-electric"
         >
-          {state === "submitting" ? "Subscribing..." : "Subscribe"}
+          {state === "submitting" ? t("subscribing") : t("subscribe")}
         </button>
       </div>
       {state === "error" && (
